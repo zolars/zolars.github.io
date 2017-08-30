@@ -9,8 +9,6 @@ tags:
 description: Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 toc: true
 mathjax: true
-#博客#
-#学习/编程/leetcode#
 ---
 >今天开始刷刷题，使用python2.7语言。为何学了python3.6却要用2.7呢？因为python2.7的适用性更广（其实是因为LeetCode只支持python2.7的缘故）。大部分代码保存在[zolars/LeetCode-Solution](https://github.com/zolars/LeetCode-Solution)，解题报告会同步至Blog。那么，就此开始吧。
 

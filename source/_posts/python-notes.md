@@ -7,8 +7,6 @@ tags:
 description: 拥有一定C语言和编程基础，学习Python时的随手记。有一部分来自于『Python入门指南』，有兴趣最好细致的阅读官方文档。环境：Python3.6.1 of OS X 10.12.5(16F73)
 toc: true
 mathjax: true
-#blog
-#code
 ---
 * 拥有一定C语言和编程基础，学习Python时的随手记。有一部分来自于[『Python入门指南』](http://www.pythondoc.com/pythontutorial3/)，有兴趣最好细致的阅读官方文档。  
 

@@ -4,7 +4,6 @@ date: 2017-08-11 23:06:05
 categories: Writing
 tags:
 - 旅行
-#blog
 ---
 一早前往人民公园，天气倒是正好，一点不热。
 

@@ -5,7 +5,6 @@ categories: Writing
 tags:
   - 秋
   - 雨
-#博客#
 ---
 <h4 style="text-align:right">[BGM：《雨が降る》坂本真綾](http://music.163.com/song/28467071?userid=58587035)</h4>
 
