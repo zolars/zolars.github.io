@@ -12,17 +12,20 @@ mathjax: true
 ---
 
 ## 题目
+
 Given a string containing just the characters`'('`and`')'`, find the length of the longest valid (well-formed) parentheses substring.
 
 For`'(()'`, the longest valid parentheses substring is`'()'`, which has length = 2.
 Another example is`')()())'`, where the longest valid parentheses substring is`'()()'`, which has length = 4.
 
 ## 题解
+
 基础的堆栈问题——回文字符串。
 第一种方法是没有任何优化的栈模型，先将整体字符串整理为可观察数组，再通过该数组来判断连续子串的长度。超时。
 第二种方法，在出栈时统一测量长度即可。
 
 ## 代码
+
 ```python
 class Solution(object):
     def longestValidParentheses1(self, s):

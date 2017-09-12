@@ -6,6 +6,7 @@ tags:
   - 秋
   - 雨
 ---
+
 <h4 style="text-align:right">[BGM：《雨が降る》坂本真綾](http://music.163.com/song/28467071?userid=58587035)</h4>
 
 没有错过，不失为一种缘分了。也许人生有无穷尽的变数，但这才刚刚开始。
