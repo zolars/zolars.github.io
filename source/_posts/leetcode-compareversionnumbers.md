@@ -20,6 +20,8 @@ For instance, `2.5` is not "two and a half" or "half way to version three", it i
 Here is an example of version numbers ordering:
 `0.1 < 1.1 < 1.2 < 13.37`
 
+<!--more-->
+
 ## 题解
 字符串切片的运用，简单题。
 

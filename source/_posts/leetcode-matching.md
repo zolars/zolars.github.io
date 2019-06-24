@@ -3,9 +3,9 @@ title: LeetCode题解：Regular Expression Matching
 date: 2017-09-04T01:16:50.000Z
 categories: Coding
 tags:
-  - leetcode
-  - python
-  - 算法
+- leetcode
+- python
+- 算法
 description: Implement regular expression matching with support for '.' and '*' .
   '.'Matches any single character. '*' Matches zero or more of the preceding
   element.The matching should cover the entire input string (not partial)...
@@ -13,7 +13,7 @@ toc: true
 mathjax: true
 ---
 
-# 题目
+## 题目
 
 Implement regular expression matching with support for`'.'`and`'*'`.
 
@@ -27,7 +27,9 @@ The function prototype should be: bool isMatch(const char \*s, const char \*p)
 
 isMatch("aa","a") → false isMatch("aa","aa") → true isMatch("aaa","aa") → false isMatch("aa", "a\*") → true isMatch("aa", ".\*") → true isMatch("ab", ".\*") → true isMatch("ab", "c\*ab") → true
 
-# 题解
+<!--more-->
+
+## 题解
 
 类似于正则表达式的匹配，但是题目有点坑：
 
@@ -38,7 +40,7 @@ isMatch("aa","a") → false isMatch("aa","aa") → true isMatch("aaa","aa") → 
 
 重要的优化：看了大神的代码，发现不需要单独判断尽头，可以一边走一边判断。
 
-# 代码
+## 代码
 
 ```python
 # -*- coding: utf-8 -*-

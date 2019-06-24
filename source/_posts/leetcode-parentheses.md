@@ -1,5 +1,5 @@
 ---
-title: LeetCode题解：Regular Expression Matching
+title: LeetCode题解：Longest Valid Parentheses
 date: 2017-08-04 10:47:11
 categories: Coding
 tags:
@@ -17,6 +17,8 @@ Given a string containing just the characters`'('`and`')'`, find the length of t
 
 For`'(()'`, the longest valid parentheses substring is`'()'`, which has length = 2.
 Another example is`')()())'`, where the longest valid parentheses substring is`'()()'`, which has length = 4.
+
+<!--more-->
 
 ## 题解
 

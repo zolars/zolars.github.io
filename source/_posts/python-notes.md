@@ -11,6 +11,8 @@ mathjax: true
 
 -   拥有一定C语言和编程基础，学习Python时的随手记。有一部分来自于[『Python入门指南』](http://www.pythondoc.com/pythontutorial3/)，有兴趣最好细致的阅读官方文档。  
 
+<!--more-->
+
 -   说明
     环境：Python3.6.1 of OS X 10.12.5(16F73)
     ※：指代这里和C语言有一些不容忽视的区别。
