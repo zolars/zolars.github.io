@@ -19,9 +19,13 @@ tags:
 毕竟也来了不短时间了，成都的感觉，大体是一个“从容”可以概括。路上的车比京津要少，街上的人却比京津要多；广场上的潮流文化引人注目，居民的素质也非常的高。不愧是我心目中的“最佳养老都市”，当时要是选择成都电子科技大，也许生活会更开心？
 
 晚间倒是无事。近几天的多人娱乐以炉石和踢门为主，玩得都很开心。好好珍惜吧，这才是大家一起旅行的真正意义。
-{% asset_img pic4.jpg 杜甫草堂 %}
-{% asset_img pic2.jpg 春熙路 %}
-{% asset_img pic3.jpg 大龙燚火锅 %}
-{% asset_img pic1.jpg 人民公园 %}
+
+![pic1](http://p1o3cbsc1.bkt.clouddn.com/pic1.jpg)
+
+![pic2](http://p1o3cbsc1.bkt.clouddn.com/pic2.jpg)
+
+![pic2](http://p1o3cbsc1.bkt.clouddn.com/pic3.jpg)
+
+![pic2](http://p1o3cbsc1.bkt.clouddn.com/pic4.jpg)
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=30569513&auto=1&height=66"></iframe>
