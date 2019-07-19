@@ -1,5 +1,6 @@
 ---
 title: BCNN实现的细粒度鸟类分类实验报告
+thumbnail: https://raw.githubusercontent.com/zolars/typora-user-images/master/20190719090608.jpg
 date: 2019-05-08 15:41:28
 categories: Coding
 tags:
@@ -17,7 +18,7 @@ mathjax: true
 
 <!--more-->
 
-![](https://ws1.sinaimg.cn/large/e67ea754ly1g2tv6qsfjdj212c0kbafd.jpg)
+<img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/20190719090610.jpg"/>
 
 > It consists of two feature extractors based on CNNs whose outputs are multiplied using **the outer product** at each location of the image and pooled across locations to obtain an image descriptor. **The outer product** captures pairwise correlations between the feature channels and can model part-feature interactions.
 >
@@ -110,11 +111,11 @@ Fine-turn时的batch_size为32，迭代次数为25，权值衰减为1e-5。
 1. 如同论文中指出的，模型会混淆部分分类。对于主要差异在于翼展，栖息地和声音的鸟类，该模型很难做出准确判断。其他常见的混淆类也在视觉上相似，例如凤头潜鸭Aythya fuligula与斑背潜鸭Aythya marila等。
 2. 在水鸟这个特殊的种类中，有部分雌性的差异远不如雄性那么明显。例如绿翅鸭Anas crecca与花脸鸭Anas formosa。如下图明显可以看出，虽然可以轻松分辨雄性的绿翅鸭和花脸鸭，但是对于雌性，它们的纹理特征区别十分的不明显。这些不明显的区别会对训练与测试准确率造成影响，取决于数据集中雌性图片的占比。
 
-<div align="center"><img src="https://ws1.sinaimg.cn/large/e67ea754ly1g2tyqlq9ntj20n40ih4pc.jpg" width="50%"/></div> 
+<div align="center"><img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/20190719090609.jpg" width="50%"/></div> 
 
 <p align="center">figure1. 雌雄绿翅鸭的特征</p>
 
-<div align="center"><img src="https://ws1.sinaimg.cn/large/e67ea754ly1g2tyqlpe6tj20ok0j4k4k.jpg" width="50%"/></div> 
+<div align="center"><img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/20190719090608.jpg" width="50%"/></div> 
 
 <p align="center">figure2. 雌雄花脸鸭的特征</p>
 

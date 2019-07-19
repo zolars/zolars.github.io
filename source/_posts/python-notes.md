@@ -4,18 +4,16 @@ date: 2017-07-13 17:16:48
 categories: Coding
 tags:
 - python
-description: 拥有一定C语言和编程基础，学习Python时的随手记。有一部分来自于『Python入门指南』，有兴趣最好细致的阅读官方文档。环境：Python3.6.1 of OS X 10.12.5(16F73)
 toc: true
 mathjax: true
 ---
 
--   拥有一定C语言和编程基础，学习Python时的随手记。有一部分来自于[『Python入门指南』](http://www.pythondoc.com/pythontutorial3/)，有兴趣最好细致的阅读官方文档。  
+> 拥有一定C语言和编程基础，学习Python时的随手记。有一部分来自于[『Python入门指南』](http://www.pythondoc.com/pythontutorial3/)，有兴趣最好细致的阅读官方文档。  
 
 <!--more-->
 
--   说明
-    环境：Python3.6.1 of OS X 10.12.5(16F73)
-    ※：指代这里和C语言有一些不容忽视的区别。
+> 环境：Python3.6.1 of OS X 10.12.5(16F73)
+> ※：指代这里和C语言有一些不容忽视的区别。
 
 ## 基本概念
 
@@ -750,6 +748,6 @@ The value of PI is approximately 3.142.
 
 第一个参数是一个含有文件名的字符串。第二个参数也是一个字符串，含有描述如何使用该文件的几个字符。`mode`为`’r’`时表示只是读取文件；`’w’`表示只是写入文件（已经存在的同名文件将被删掉）；`’a’`表示打开文件进行追加，写入到文件中的任何数据将自动添加到末尾。`'r+'`表示打开文件进行读取和写入。`mode`参数是可选的，默认为`’r’`。
 
-# 总结
+## 总结
 
 大体的Python的语法和语句就先学习至此。剩下还有”异常与错误处理“，”Python标准库“，”交互式输入“等。具体问题具体分析。

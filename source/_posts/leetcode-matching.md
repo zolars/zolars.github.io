@@ -5,11 +5,6 @@ categories: Coding
 tags:
 - leetcode
 - python
-- 算法
-description: Implement regular expression matching with support for '.' and '*' .
-  '.'Matches any single character. '*' Matches zero or more of the preceding
-  element.The matching should cover the entire input string (not partial)...
-toc: true
 mathjax: true
 ---
 
@@ -18,6 +13,8 @@ mathjax: true
 Implement regular expression matching with support for`'.'`and`'*'`.
 
 `'.'`Matches any single character. `'*'`Matches zero or more of the preceding element.
+
+<!--more-->
 
 The matching should cover the entire input string (not partial).
 

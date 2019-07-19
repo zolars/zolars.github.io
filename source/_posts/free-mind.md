@@ -2,11 +2,9 @@
 title: Free Mind
 date: 2017-05-21 08:22:32
 categories: Writing
-description:
 tags: 夏
 ---
 
-<h4 style="text-align:right">[BGM：《桜色舞うころ》德永英明](http://music.163.com/song/30284559?userid=58587035)</h4>
 
 高中毕业已一年，早已释然。不管作出的选择能否令人生路更加顺利，至少我还能自信的说出曾经的心声：
 
@@ -29,3 +27,5 @@ tags: 夏
 如果做不到的话，那就先随遇而安，让时间证明一切就好了。
 
 回去吧，不要再追逐生活本质之外的虚荣。**炎夏将至，总有青春繁华逝，虽困惑迷惘于心，但无悔便是。**
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=30569513&auto=0&height=66"></iframe>

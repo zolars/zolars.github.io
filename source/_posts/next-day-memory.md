@@ -7,8 +7,6 @@ tags:
   - 雨
 ---
 
-<h4 style="text-align:right">[BGM：《雨が降る》坂本真綾](http://music.163.com/song/28467071?userid=58587035)</h4>
-
 没有错过，不失为一种缘分了。也许人生有无穷尽的变数，但这才刚刚开始。
 
 浪漫是什么，广袤的世界里，相识相知的两人，可以挽着手，肩并肩，共同体会幸福与不幸。晚间，雨起时，自认为理智的我才不愿意冒着雨出去。但现在回想，也许这短暂的雨，是此生都难得的浪漫。
@@ -20,3 +18,5 @@ tags:
 固执如我，不会轻易放手的。她能不能听见呢?
 
 所以，在这微冷的秋日，满怀希望的期待着明日的朝阳吧。只因为下一日，一定更值得纪念。
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28467071&auto=0&height=66"></iframe>

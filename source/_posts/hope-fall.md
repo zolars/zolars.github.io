@@ -4,7 +4,6 @@ date: 2016-11-20 23:22:09
 categories: Writing
 tags:
 - 雨
-description:
 ---
 
 去校本部公关，因为活动结束的太迟，不得不赶末班地铁，差一丢丢就上不去了。

@@ -5,9 +5,6 @@ categories: Coding
 tags:
 - leetcode
 - python
-- 算法
-description: Given a string containing just the characters ’(‘ and ’)’ , find the length of the longest valid (well-formed) parentheses substring.
-toc: true
 mathjax: true
 ---
 

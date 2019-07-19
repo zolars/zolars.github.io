@@ -5,13 +5,13 @@ categories: Coding
 tags:
 - leetcode
 - python
-description: Compare two version numbers version1 and version2.If version1 > version2 return 1, if version1 < version2 return -1, otherwise return 0.
-toc: true
 mathjax: true
 ---
 ## 题目
 Compare two version numbers version1 and version2.
 If version1 > version2 return 1, if version1 < version2 return -1, otherwise return 0.
+
+<!--more-->
 
 You may assume that the version strings are non-empty and contain only digits and the . character.
 The `.` character does not represent a decimal point and is used to separate number sequences.
