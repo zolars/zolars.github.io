@@ -4,9 +4,8 @@ date: 2017-08-11 23:06:05
 categories: Writing
 tags:
 - 旅行
+thumbnail: https://raw.githubusercontent.com/zolars/typora-user-images/master/pic4.jpg
 ---
-
-<img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/pic4.jpg" class="full-image" />
 
 一早前往人民公园，天气倒是正好，一点不热。
 
@@ -29,5 +28,7 @@ tags:
 ![chengdu-memory(2)](https://raw.githubusercontent.com/zolars/typora-user-images/master/pic2.jpg)
 
 ![chengdu-memory(3)](https://raw.githubusercontent.com/zolars/typora-user-images/master/pic3.jpg)
+
+![chengdu-memory(4)](https://raw.githubusercontent.com/zolars/typora-user-images/master/pic4.jpg)
 
 ![chengdu-memory(5)](https://raw.githubusercontent.com/zolars/typora-user-images/master/IMG_8989.jpg)

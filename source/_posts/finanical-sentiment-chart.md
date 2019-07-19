@@ -5,11 +5,9 @@ categories: Coding
 tags:
 - Scrapy
 - python
+- Web Design
+thumbnail: https://raw.githubusercontent.com/zolars/typora-user-images/master/20190715132829.png
 ---
-
-<iframe allowtransparency="false" height="350" src="https://drive.google.com/file/d/12Z8ZbeNHNtZHSf6XzPC5iZj8-QX8_Zso/preview" width="100%"></iframe>
-
-<!-- <img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/20190715132829.png" class="full-image" /> -->
 
 ## Abstract
 
@@ -18,6 +16,8 @@ Finanical Sentiment Chart aims to analyse influence between social sentiment and
 This project uses scraper with high performance to get large scale data of tweets. With these data, run sentiment analysis in order to generate a realtime update chart. The raw data is also saved in database, which may provide further analysis.
 
 <!--more-->
+
+<iframe allowtransparency="false" height="350" src="https://drive.google.com/file/d/12Z8ZbeNHNtZHSf6XzPC5iZj8-QX8_Zso/preview" width="100%"></iframe>
 
 ## Objective
 
@@ -45,18 +45,18 @@ After that, I build a light-wight Web application with python flask and echarts.
 ## Usage
 
 1. You need to install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) and [MySQL](http://dev.mysql.com/downloads/mysql/) on your computer.
-    ```bash
+    ```
     $ conda -V
     conda 4.6.xx
     ```
 
 2. Get the code from Github clone.
-    ```bash
+    ```
     $ git clone https://github.com/zolars/finanical-sentiment.git
     ```
 
 3. Create the environment.
-    ```bash
+    ```
     $ cd finanical-sentiment
     $ conda create -n finance python=3.6
     $ conda activate finance
@@ -65,7 +65,7 @@ After that, I build a light-wight Web application with python flask and echarts.
     ```
 
 4. Install dependencies.
-    ```bash
+    ```
     $ conda activate finance
     $ conda install -c conda-forge scrapy
     $ python -m pip install -r requirements.txt
@@ -95,13 +95,13 @@ After that, I build a light-wight Web application with python flask and echarts.
         Tips: use Twitter operators for advanced search.
 
 7. Run the app
-    ```bash
+    ```
     $ cd finanical-sentiment
     $ conda activate finance
     $ python tweet_engine.py
     ```
 
-    ```bash
+    ```
     $ cd finanical-sentiment
     $ conda activate finance
     $ python charts_engine.py
