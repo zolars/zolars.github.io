@@ -15,16 +15,16 @@ toc: true
 ## 产品介绍
 
 * Epsilon
-  
+ 
 <div align="center"><img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/Epsilon%20(2).png"/></div>
-  
+ 
 <div align="center"><img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/Epsilon%20(11).jpeg"/></div>
-  
+ 
 * 基础功能
   Epsilon小车能够自动对六米范围内的移动红外信号发射源进行准确跟踪，并能够实时显示跟踪距离和跟踪时间。
-  
+ 
 <div align="center"><img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/Epsilon%20(3).jpeg"/></div>
-  
+ 
 * 附加功能
   - 超声波测距避障
   - 红外遥控小车行进，可切换遥控 / 追踪两种模式。

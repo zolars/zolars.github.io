@@ -24,11 +24,11 @@ mathjax: true
 >
 > 它由两个基于CNN的特征提取器组成，其输出在图像的每个位置使用**外积**相乘，并跨位置合并以获得图像描述符。 **外积**捕获特征通道之间的成对相关性，并可以模拟部件特征交互。
 >
-> Moreover, the architecture can be easily trained end-to-end leading to significant improvements in performance. 
+> Moreover, the architecture can be easily trained end-to-end leading to significant improvements in performance.
 >
 > 此外，该架构可以轻松地端到端地进行训练，从而显着提高性能。
 >
-> Since our model is linear in the outputs of two CNNs we call our approach bilinear CNNs. 
+> Since our model is linear in the outputs of two CNNs we call our approach bilinear CNNs.
 >
 > 由于我们的模型在两个CNN的输出中是线性的，我们称之为双线性CNN。
 
@@ -38,7 +38,7 @@ mathjax: true
 
 使用 PyTorch 框架复现论文作者在 CUB200-2011 数据集上实现的细粒度分类。
 
-训练用图像的格式为三通道RGB 448*448，总特征数为512. 
+训练用图像的格式为三通道RGB 448*448，总特征数为512.
 
 使用的 BCNN 的模型结构如下：
 
@@ -111,11 +111,11 @@ Fine-turn时的batch_size为32，迭代次数为25，权值衰减为1e-5。
 1. 如同论文中指出的，模型会混淆部分分类。对于主要差异在于翼展，栖息地和声音的鸟类，该模型很难做出准确判断。其他常见的混淆类也在视觉上相似，例如凤头潜鸭Aythya fuligula与斑背潜鸭Aythya marila等。
 2. 在水鸟这个特殊的种类中，有部分雌性的差异远不如雄性那么明显。例如绿翅鸭Anas crecca与花脸鸭Anas formosa。如下图明显可以看出，虽然可以轻松分辨雄性的绿翅鸭和花脸鸭，但是对于雌性，它们的纹理特征区别十分的不明显。这些不明显的区别会对训练与测试准确率造成影响，取决于数据集中雌性图片的占比。
 
-<div align="center"><img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/20190719090609.jpg" width="50%"/></div> 
+<div align="center"><img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/20190719090609.jpg" width="50%"/></div>
 
 <p align="center">figure1. 雌雄绿翅鸭的特征</p>
 
-<div align="center"><img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/20190719090608.jpg" width="50%"/></div> 
+<div align="center"><img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/20190719090608.jpg" width="50%"/></div>
 
 <p align="center">figure2. 雌雄花脸鸭的特征</p>
 
