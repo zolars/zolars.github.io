@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Yifei Xin's Blog
-subtitle: Yifei Xin's Blog
+title: Yifei's Blog
+subtitle: Yifei's Blog
 description: Just a new student.
-author: Yifei Xin
+author: Yifei
 language: en
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://zolars.github.io
-root: /
+url: https://zolars.github.io/blog
+root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -81,4 +81,5 @@ mathjax: true
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:zolars/zolars.github.io.git
+  repo: git@github.com:zolars/blog.git
+  branch: master
