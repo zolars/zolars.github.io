@@ -2,7 +2,7 @@
 title: BCNN实现的细粒度鸟类分类实验报告
 thumbnail: https://raw.githubusercontent.com/zolars/typora-user-images/master/20190719090608.jpg
 date: 2019-05-08 15:41:28
-categories: Coding
+categories: Study
 tags:
 - CV
 - CAS

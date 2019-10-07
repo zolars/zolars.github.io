@@ -1,7 +1,7 @@
 ---
 title: Python学习笔记
 date: 2017-07-13 17:16:48
-categories: Coding
+categories: Study
 tags:
 - python
 toc: true

@@ -1,7 +1,7 @@
 ---
 title: 2018小学期：长距离定向跟踪小车-Epsilon
 date: 2018-07-19 18:11:03
-categories: Coding
+categories: Study
 tags:
 - Arduino
 - BUPT

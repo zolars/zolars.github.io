@@ -1,7 +1,7 @@
 ---
 title: Python ❤ Echarts - Making an airline echarts
 date: 2018-11-19 14:49:37
-categories: Coding
+categories: Study
 tags:
 - python
 - Web Design

@@ -1,7 +1,7 @@
 ---
 title: LeetCode题解：Longest Valid Parentheses
 date: 2017-08-04 10:47:11
-categories: Coding
+categories: Study
 tags:
 - leetcode
 - python

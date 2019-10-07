@@ -1,7 +1,7 @@
 ---
 title: LeetCode题解：Two Sum
 date: 2017-07-28 15:57:32
-categories: Coding
+categories: Study
 tags:
 - leetcode
 - python

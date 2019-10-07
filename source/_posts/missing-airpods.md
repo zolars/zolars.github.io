@@ -2,8 +2,6 @@
 title: 乱七八糟的心情过山车？
 date: 2017-05-04 15:57:32
 categories: Writing
-tags:
-- 
 ---
 
 这回轮到AirPods丢失这种更加绝望的事了。

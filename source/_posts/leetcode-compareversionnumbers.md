@@ -1,7 +1,7 @@
 ---
 title: LeetCode题解：Compare Version Numbers
 date: 2017-08-01 19:46:53
-categories: Coding
+categories: Study
 tags:
 - leetcode
 - python

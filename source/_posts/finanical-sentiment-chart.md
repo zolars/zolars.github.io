@@ -1,7 +1,7 @@
 ---
 title: Finanical Sentiment Chart <br> Easy to analysis Finance with Tweets' Sentiments
 date: 2019-07-01 23:41:07
-categories: Coding
+categories: Study
 tags:
 - Scrapy
 - python
@@ -42,7 +42,7 @@ I made a realtime scraper with high performance in order to catch data from [Twi
 
 ![MySQL Database](https://raw.githubusercontent.com/zolars/typora-user-images/master/20190707234203.png)
 
-After that, I build a light-wight Web application with Python [Flask](https://palletsprojects.com/p/flask/) and [ECharts](https://echarts.apache.org/zh/index.html). The application can be easily deployed on any server with python environment and it can run realtime, stably and automatically. I will give you the deploy method and a video as instructions.
+After that, I build a light-wight Web application with Python Flask and ECharts. The application can be easily deployed on any server with python environment and it can run realtime, stably and automatically. I will give you the deploy method.
 
 Find more about this project on my [GitHub](https://github.com/zolars/financial-sentiment) 🙋‍
 
