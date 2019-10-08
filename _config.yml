@@ -4,7 +4,7 @@
 
 # Site
 title: Yifei's Blog
-subtitle: Yifei's Blog
+subtitle: 
 description: Just a new student.
 author: Yifei
 language: en
@@ -12,8 +12,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://zolars.github.io/blog
-root: /blog/
+url: https://zolars.github.io
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -26,6 +26,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - "_posts/cas-airline/*.html"
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -81,5 +82,5 @@ mathjax: true
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:zolars/blog.git
-  branch: master
+  repo: git@github.com:zolars/zolars.github.io.git
+  branch:
