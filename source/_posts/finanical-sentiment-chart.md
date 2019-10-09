@@ -6,22 +6,22 @@ tags:
 - Scrapy
 - python
 - Web Design
-thumbnail: https://raw.githubusercontent.com/zolars/typora-user-images/master//img/20191007211343.png
-
 ---
 
-## Abstract
+# Abstract
 
 Finanical Sentiment Chart aims to analyse influence between social sentiment and financial tendency. This is a cooperation project with [Oscar Osborne](https://www.linkedin.com/in/oscarosborne), Ph.D of the University of New South Wales.
 
 This project uses scraper with high performance to get large scale data of tweets. With these data, run sentiment analysis in order to generate a realtime update chart. The raw data is also saved in database, which may provide further analysis.
+
+![](https://raw.githubusercontent.com/zolars/typora-user-images/master/img/20191007211343.png)
 
 <!--more-->
 
 <iframe allowtransparency="false" height="350" src="https://drive.google.com/file/d/12Z8ZbeNHNtZHSf6XzPC5iZj8-QX8_Zso/preview" width="100%"></iframe>
 <p align="center"><i>👆Please watch the video to get a highlight</i></p>
 
-## Objective
+# Objective
 
 To develop a platform which gathers live financial data and social network/online information/media information which will be displayed in a HTML format. The dataset will be used to analyze the relationship between online social sentiment of a certain stock, share, currency, crypto, and that stock price over a period of time.
 
@@ -36,7 +36,7 @@ In order to find the social sentiment of a stock, the program will use keywords 
 
 What's more, this Web application is built as a financial analysis tool. Consequently, I hope that **anyone whether owned programming experiences or not**, can easily run and deploy this service.
 
-## Implementation
+# Implementation
 
 I made a realtime scraper with high performance in order to catch data from [Twitter](https://www.twitter.com) and [Weibo](https://www.weibo.com). The data is saved in MySQL database and execute sentiment analysis with a pipeline.
 
@@ -46,7 +46,7 @@ After that, I build a light-wight Web application with Python Flask and ECharts.
 
 Find more about this project on my [GitHub](https://github.com/zolars/financial-sentiment) 🙋‍
 
-## Usage
+# Usage
 
 1. Get the code from Github clone or download zip by clicking [this](https://github.com/zolars/financial-sentiment/archive/master.zip).
     ```
@@ -102,9 +102,9 @@ Find more about this project on my [GitHub](https://github.com/zolars/financial-
     $ python app.py
     ```
 
-## Twitter Advanced Search Options
+# Twitter Advanced Search Options
 
-### How to use 'Advanced Search' to generate query?
+## How to use 'Advanced Search' to generate query?
 
 1. With this website, input any keywords you want to search for.
     ![](https://raw.githubusercontent.com/zolars/typora-user-images/master/20190724022657.png)
@@ -112,7 +112,7 @@ Find more about this project on my [GitHub](https://github.com/zolars/financial-
 3. In the new page, copy the query you need as below:
     ![](https://raw.githubusercontent.com/zolars/typora-user-images/master/20190724023017.png)
 
-### Code Options
+## Code Options
 
 | Operator                               | Finds tweets...                                                           |
 | -------------------------------------- | ------------------------------------------------------------------------- |
@@ -134,6 +134,10 @@ Find more about this project on my [GitHub](https://github.com/zolars/financial-
 | hilarious **filter:links**             | containing "hilarious" and linking to URLs.                               |
 | news **source:twitterfeed**            | containing "news" and entered via TwitterFeed                             |
 
-### Where is the export Excel files?
+## Where is the export Excel files?
 
 They locate at `./out/`.
+
+# Problems
+
+I tried to deploy this server on my laboratory's workstations and made them work as a cluster. However, low performance in high concurrency circumstances, as the main problem currently, has bothered me. (Though the architecture is so naive🤷‍♀️) The key point was that classic high concurrency method cannot be easily used to Twitter due to the flow limitations for each IP accessing to Twitter. An software architect may solve this problem, I think. For me, I need some further study or read more paper on this area.

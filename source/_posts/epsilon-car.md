@@ -4,7 +4,6 @@ date: 2018-07-19 18:11:03
 categories: Study
 tags:
 - Arduino
-- BUPT
 toc: true
 ---
 

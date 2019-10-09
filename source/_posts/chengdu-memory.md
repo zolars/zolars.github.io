@@ -4,7 +4,6 @@ date: 2017-08-11 23:06:05
 categories: Writing
 tags:
 - 旅行
-thumbnail: https://raw.githubusercontent.com/zolars/typora-user-images/master/pic4.jpg
 ---
 
 一早前往人民公园，天气倒是正好，一点不热。
