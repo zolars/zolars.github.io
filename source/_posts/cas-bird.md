@@ -4,8 +4,6 @@ date: 2019-05-08 15:41:28
 categories: Study
 tags:
 - CV
-- fine-grain
-- python
 toc: true
 mathjax: true
 ---

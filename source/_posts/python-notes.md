@@ -1,6 +1,6 @@
 ---
-title: Python学习笔记
-date: 2017-07-13 17:16:48
+title: Python Learning Note
+date: 2016-07-13 17:16:48
 categories: Study
 tags:
 - python
@@ -296,7 +296,7 @@ def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
     print("-- This parrot wouldn't", action, end=' ')
     print("if you put", voltage, "volts through it.")
     print("-- Lovely plumage, the", type)
-    print("-- It's", state, “!”)
+    print("-- It's", state, "!")
 ```
 
 调用时使用
@@ -666,7 +666,7 @@ The value of x is 32.5, and y is 40000...
 'hello, world\n'
 >>> # The argument to repr() may be any Python object:
 ... repr((x, y, ('spam', 'eggs')))
-"(32.5, 40000, ('spam', 'eggs’))”
+"(32.5, 40000, ('spam', 'eggs’))"
 ```
 
 ### `str.format()`方法
@@ -750,4 +750,4 @@ The value of PI is approximately 3.142.
 
 ## 总结
 
-大体的Python的语法和语句就先学习至此。剩下还有”异常与错误处理“，”Python标准库“，”交互式输入“等。具体问题具体分析。
+大体的Python的语法和语句就先学习至此。剩下还有"异常与错误处理"，"Python标准库"，"交互式输入"等。具体问题具体分析。

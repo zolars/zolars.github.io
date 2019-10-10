@@ -4,8 +4,7 @@ date: 2019-07-01 23:41:07
 categories: Study
 tags:
 - Scrapy
-- python
-- Web Design
+- Web
 ---
 
 # Abstract

@@ -1,9 +1,9 @@
 ---
-title: 爬虫学习笔记
-date: 2017-10-23 01:14:22
+title: Scrapy Learning Note
+date: 2016-10-23 01:14:22
 categories: Study
 tags:
-- scrapy
+- CS
 toc: true
 mathjax: true
 ---

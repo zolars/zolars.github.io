@@ -3,8 +3,7 @@ title: Python ❤ Echarts - Making an airline Echarts
 date: 2018-11-19 14:49:37
 categories: Study
 tags:
-- python
-- Web Design
+- Web
 ---
 
 > By IDP project, I learned about Echarts on javascript. With this experiences, I took a job yesterday: Making a demo webpage for airlines. Originally, I purpose to write this with JS code and HTML but I just wanna make this page expansionable and 'agile'. Complementing this with Python Flask structure and explore pyecharts package seems good. Anyway, these days are too boring without any job​. Time to work 🙌

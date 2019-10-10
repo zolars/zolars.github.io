@@ -4,7 +4,6 @@ date: 2017-09-04T01:16:50.000Z
 categories: Study
 tags:
 - leetcode
-- python
 mathjax: true
 ---
 

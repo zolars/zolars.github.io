@@ -3,7 +3,7 @@ title: Mini Program：Long-distance tracking smart car - Epsilon
 date: 2018-07-19 18:11:03
 categories: Study
 tags:
-- Arduino
+- EE
 toc: true
 ---
 
