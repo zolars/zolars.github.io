@@ -1,5 +1,5 @@
 ---
-title: LeetCode题解：Regular Expression Matching
+title: LeetCode - Regular Expression Matching
 date: 2017-09-04T01:16:50.000Z
 categories: Study
 tags:
@@ -8,7 +8,7 @@ tags:
 mathjax: true
 ---
 
-## 题目
+## Problem
 
 Implement regular expression matching with support for`'.'`and`'*'`.
 
@@ -34,18 +34,18 @@ isMatch("ab", "c\*ab") → true
 
 <!--more-->
 
-## 题解
+## Solution
 
-类似于正则表达式的匹配，但是题目有点坑：
+Similar to regular expression matching, but this problem is a little weird:
 
-1.  第一行字符串不会含有`'.'`和`'*'`，否则难度直线飙升。
-2.  这里面的`'*'`是可以匹配0个字符的啊！开始没注意，白敲半小时。
+1. The first line of the string will not contain `'.'`和`'*'`. Otherwise the difficulty will skyrocket.
+2. The `'*'` can match ZERO characters! Did not pay attention at first, wasted for half an hour.
 
-那么这题的正确做法是什么呢？很明显是DP的递归，但是有很多边界要想清楚。一开始做这题就死在了边界上。
+So what is the correct way to deal with this? It is obviously the recursion of DP, but there are many boundaries necessary to care.
 
-重要的优化：看了大神的代码，发现不需要单独判断尽头，可以一边走一边判断。
+Important optimization: I saw the code of the Ace and found that I don't need to judge the end. It can be judged while walking.
 
-## 代码
+## Code
 
 ```python
 # -*- coding: utf-8 -*-
@@ -56,7 +56,7 @@ class Solution(object):
         :type p: str
         :rtype: bool
         """
-        # 预处理
+        
         global s, p
         s = ss + '\n'
         p = pp + '\n'

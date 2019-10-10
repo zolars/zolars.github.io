@@ -1,5 +1,5 @@
 ---
-title: LeetCode题解：Two Sum
+title: LeetCode - Two Sum
 date: 2017-07-28 15:57:32
 categories: Study
 tags:
@@ -8,9 +8,9 @@ tags:
 mathjax: true
 ---
 
-> 今天开始刷刷题，使用python2.7语言。为何学了python3.6却要用2.7呢？因为python2.7的适用性更广（其实是因为LeetCode只支持python2.7的缘故）。大部分代码保存在[zolars/LeetCode-Solution](https://github.com/zolars/LeetCode-Solution)，解题报告会同步至Blog。那么，就此开始吧。
+> Do some problems for this summer holiday with python2.7. Learning python3 before but I have to use python2.7 due to the widespread usage (actually because of LeetCode which just provide python2.7). Most code was saved at [zolars/LeetCode-Solution](https://github.com/zolars/LeetCode-Solution), some essays were saved at Blog. So, come on and get to work.
 
-## 题目
+## Problem
 
 Given an array of integers, return **indices** of the two numbers such that they add up to a specific target.
 You may assume that each input would have **exactly** one solution, and you may not use the same element twice.
@@ -24,12 +24,12 @@ You may assume that each input would have **exactly** one solution, and you may 
 
 <!--more-->
 
-## 题解
+## Solution
 
 ### Brute Force
 
-因为题目里说到每个输入有且只有一个解，所以最简单的想法即逐一比较每一对数值。
-此方法时间复杂度为$O(n)$
+Because the topic says that each input has one and only one solution, the simplest idea is to compare each pair of values one by one.
+The time complexity of this method is $O(n)$
 
 ```python
 k = 0
@@ -41,8 +41,8 @@ for i in nums:
 
 ### Hash Table
 
-使用了python的优秀特性：python中的字典自带哈希表且索引速度很快，在字典中查找的复杂度为$O(1)$，而在列表中查找的复杂度为$O(n)$。
-建立一个边构建边查找的哈希表（One-pass Hash Table），是一个很好的优化。
+Using the brilliant features of Python: The dictionary in Python comes with a hash table and the index speed is very fast. The complexity of searching in the dictionary is $O(1)$, and the complexity in the list is $O(n)$.
+Creating a One-pass Hash Table for side-by-side lookups is a good optimization.
 
 ```python
 lookup = {}
@@ -54,10 +54,7 @@ for i, num in enumerate(nums):
 return([])
 ```
 
--   在序列中循环时，索引位置和对应值可以使用`enumerate()`函数同时得到。
-    `for i, j in enumerate(list)`
-
-## 代码
+## Code
 
 ```python
 class Solution(object):

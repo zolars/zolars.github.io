@@ -1,5 +1,5 @@
 ---
-title: LeetCode题解：Longest Valid Parentheses
+title: LeetCode - Longest Valid Parentheses
 date: 2017-08-04 10:47:11
 categories: Study
 tags:
@@ -8,7 +8,7 @@ tags:
 mathjax: true
 ---
 
-## 题目
+## Problem
 
 Given a string containing just the characters`'('`and`')'`, find the length of the longest valid (well-formed) parentheses substring.
 
@@ -17,13 +17,13 @@ Another example is`')()())'`, where the longest valid parentheses substring is`'
 
 <!--more-->
 
-## 题解
+## Solution
 
-基础的堆栈问题——回文字符串。
-第一种方法是没有任何优化的栈模型，先将整体字符串整理为可观察数组，再通过该数组来判断连续子串的长度。超时。
-第二种方法，在出栈时统一测量长度即可。
+The underlying stack problem - the palindrome string.
+The first method is to have no optimized stack model, first sort the whole string into an observable array, and then use the array to determine the length of the continuous substring. time out.
+The second method is to uniformly measure the length when popping up.
 
-## 代码
+## Code
 
 ```python
 class Solution(object):

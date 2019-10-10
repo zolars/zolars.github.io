@@ -1,5 +1,5 @@
 ---
-title: LeetCode题解：Compare Version Numbers
+title: LeetCode - Compare Version Numbers
 date: 2017-08-01 19:46:53
 categories: Study
 tags:
@@ -7,7 +7,7 @@ tags:
 - python
 mathjax: true
 ---
-## 题目
+## Problem
 Compare two version numbers version1 and version2.
 If version1 > version2 return 1, if version1 < version2 return -1, otherwise return 0.
 
@@ -22,10 +22,10 @@ Here is an example of version numbers ordering:
 
 <!--more-->
 
-## 题解
-字符串切片的运用，简单题。
+## Solution
+The practice of string slicing, such a simple quesiton.
 
-## 代码
+## Code
 ```python
 class Solution(object):
     def compareVersion(self, version1, version2):
