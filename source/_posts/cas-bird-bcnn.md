@@ -1,11 +1,10 @@
 ---
 title: Fine-grained bird classification experiment with the BCNN
-date: 2019-05-08 15:41:28
+date: 2019-01-08 15:41:28
 categories: Study
 tags:
 - CV
 toc: true
-mathjax: true
 ---
 
 ## Paper's Principle

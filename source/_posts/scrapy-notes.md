@@ -3,9 +3,8 @@ title: scrapy Learning Notes
 date: 2016-10-23 01:14:22
 categories: Study
 tags:
-- note
+- CS
 toc: true
-mathjax: true
 ---
 
 # 爬虫学习笔记

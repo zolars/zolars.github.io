@@ -1,5 +1,5 @@
 ---
-title: Finanical Sentiment Chart <br> Easy to analysis Finance with Tweets' Sentiments
+title: financial Sentiment Charts <br> Easy to analysis Finance with Tweets' Sentiments
 date: 2019-07-01 23:41:07
 categories: Study
 tags:
@@ -9,7 +9,7 @@ tags:
 
 # Abstract
 
-Finanical Sentiment Chart aims to analyse influence between social sentiment and financial tendency. This is a cooperation project with [Oscar Osborne](https://www.linkedin.com/in/oscarosborne), Ph.D of the University of New South Wales.
+financial Sentiment Chart aims to analyse influence between social sentiment and financial tendency. This is a cooperation project with [Oscar Osborne](https://www.linkedin.com/in/oscarosborne), Ph.D of the University of New South Wales.
 
 This project uses scraper with high performance to get large scale data of tweets. With these data, run sentiment analysis in order to generate a realtime update chart. The raw data is also saved in database, which may provide further analysis.
 
@@ -43,13 +43,13 @@ I made a realtime scraper with high performance in order to catch data from [Twi
 
 After that, I build a light-wight Web application with Python Flask and ECharts. The application can be easily deployed on any server with python environment and it can run realtime, stably and automatically. I will give you the deploy method.
 
-Find more about this project on my [GitHub](https://github.com/zolars/financial-sentiment) 🙋‍
+Find more about this project on my [GitHub](https://github.com/zolars/financial-sentiment-charts) 🙋‍
 
 # Usage
 
 1. Get the code from Github clone or download zip by clicking [this](https://github.com/zolars/financial-sentiment/archive/master.zip).
     ```
-    $ git clone https://github.com/zolars/finanical-sentiment.git
+    $ git clone https://github.com/zolars/financial-sentiment.git
     ```
 
 2. You need to install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) and [MySQL](http://dev.mysql.com/downloads/mysql/) on your computer.
@@ -68,7 +68,7 @@ Find more about this project on my [GitHub](https://github.com/zolars/financial-
 
 3. Create the environment.
     ```
-    $ cd finanical-sentiment
+    $ cd financial-sentiment
     $ conda env create -f environment.yml
     $ conda activate finance
     $ python -V
@@ -96,7 +96,7 @@ Find more about this project on my [GitHub](https://github.com/zolars/financial-
 
 6. Run the app
     ```
-    $ cd finanical-sentiment
+    $ cd financial-sentiment
     $ conda activate finance
     $ python app.py
     ```

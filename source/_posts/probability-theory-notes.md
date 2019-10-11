@@ -3,7 +3,7 @@ title: Probability Theory Notes
 date: 2017-06-03 14:42:20
 categories: Study
 tags:
-- note
+- math
 toc: true
 mathjax: true
 ---
@@ -88,7 +88,7 @@ That is, for classical random experiment $E$, $\Omega = \{\omega_1, \omega_2, \o
 $$
 P(A)=\frac{ \#A} { \#\Omega}.
 $$
-where $\#A$ means the number of all possible outcomes of event $A$, $\#\Omega$ Means the number of all possible outcomes of sample space $\Omega$. The probability of impossible event is defined as,
+where `#A` means the number of all possible outcomes of event $A$, `#Ω` Means the number of all possible outcomes of sample space $\Omega$. The probability of impossible event is defined as,
 $$
 P(\varnothing)=0.
 $$
@@ -97,7 +97,7 @@ $$
 
 Generally, a random experiment $E$ is called to be **geometric** if,
 
-1. The sample space is a a measurable (such as length, area, volume, etc.) region, i.e., $0<L(\Omega)<\infin$.
+1. The sample space is a a measurable (such as length, area, volume, etc.) region, i.e., $0<L(\Omega)<\infty$.
 2. The probability of every event $A\subset\Omega$ is proportional to the measure $L(A)$ and has nothing to do with its position and shape.
 
 In this case, we define the probability of event $A$ as,
@@ -114,7 +114,7 @@ For Geomatrical random experiment $E$, the probability has the following propert
 
 3. For every countable disjoint events $A_1, A_2, \dotsb ,$
    $$
-   P (\text{ } \bigcup^{\infin}_{i=1}A_i \text{ }) = \sum^{\infin}_{i=1}P(A_i).
+   P (\text{ } \bigcup^{\infty}_{i=1}A_i \text{ }) = \sum^{\infty}_{i=1}P(A_i).
    $$
    
 
@@ -136,7 +136,7 @@ For a random experiment $E$, the probability has the following properties,
 
 3. For every countable disjoint events $A_1, A_2,  \dotsb  , A_n,$
    $$
-   F_n (\text{ } \bigcup^{\infin}_{i=1}A_i \text{ }) = \sum^{\infin}_{i=1}F_n(A_i).
+   F_n (\text{ } \bigcup^{\infty}_{i=1}A_i \text{ }) = \sum^{\infty}_{i=1}F_n(A_i).
    $$
 
 
@@ -165,7 +165,7 @@ Let $P(A) (A \in \mathscr{F})$ be a non-negative set function on the $\sigma$-al
 
 3. (countable additivity) For every infinite sequence of countable disjoint events $A_1, A_2, \dotsb ,$
    $$
-   P (\text{ } \bigcup^{\infin}_{i=1}A_i \text{ }) = \sum^{\infin}_{i=1} P(A_i).
+   P (\text{ } \bigcup^{\infty}_{i=1}A_i \text{ }) = \sum^{\infty}_{i=1} P(A_i).
    $$
    The set in $\sigma$-algebra $\mathscr{F} $ are called events. $\mathscr{F} $ is called to be the algebra of events. The triple($\Omega, \mathscr{F}, P$) is a **probability space** or **probability triple**.
 
@@ -209,7 +209,7 @@ If $P(B)>0$, then the conditional probability $P(A|B)$ is also a probability, th
 
 3. For every infinite sequence of countable disjoint events $A_1, A_2,  \dotsb ,$
    $$
-   P (\text{ } \bigcup^{\infin}_{i=1}A_i|B \text{ }) = \sum^{\infin}_{i=1} P(A_i|B).
+   P (\text{ } \bigcup^{\infty}_{i=1}A_i|B \text{ }) = \sum^{\infty}_{i=1} P(A_i|B).
    $$
 
 
@@ -307,9 +307,9 @@ The function $F(x)$ that associates with each real number $x$ the probability $P
 $$
 F(x)=P(X \leqslant x), \forall ~ x \in R.
 $$
-==**d.f.** : distribution function.==
+**d.f.** : distribution function.
 
-==**c.d.f.** : cumulative distribution function.==
+**c.d.f.** : cumulative distribution function.
 
 ---
 
@@ -338,7 +338,7 @@ For a discrete random variable $X$, we define the **probability (mass) function*
 $$
 p(x) = P(X=x).
 $$
-==**p.f.** : probability function.==
+**p.f.** : probability function.
 
 ---
 
@@ -370,7 +370,7 @@ We call $X$ a continuous random variable if there is a function $f$ defined for 
 
    Where $f(x)$ is called the **probability density function**.
 
-==**p.d.f.** : probability density function.==
+**p.d.f.** : probability density function.
 
 ---
 
@@ -401,7 +401,7 @@ $$
    $$
    for any $x$ where $F(x)$ is differentiable.
 
-   ==When $F(x)$ is not differentiable at point $P$, so $f(x)=0$ at point $P$.== 
+   When $F(x)$ is not differentiable at point $P$, so $f(x)=0$ at point $P$. 
 
 ### 2.2.2 The Distribution Function of Function of a Random Variable
 
@@ -561,7 +561,7 @@ $$
 
 ---
 
-==**Poisson limit theorem**== : Suppose that $\lambda$ is a constant and $n$ is a positive integer. If that $lim_{n\to \infty}np_n=\lambda$, then we have,
+**Poisson limit theorem** : Suppose that $\lambda$ is a constant and $n$ is a positive integer. If that $lim_{n\to \infty}np_n=\lambda$, then we have,
 $$
 \displaystyle{
 \lim_{n\to+\infty} 
@@ -704,7 +704,7 @@ Proposition of the standard normall distribution,
 
 1. $\Phi(x)+\Phi(-x)=1$.
 2. $\displaystyle \Phi(0)=\frac12.$
-3. ==If $X \sim N(\mu,\sigma^2)$, then the d.f. $F(x)$ of $X$ is given by $\displaystyle \Phi(\frac{x-\mu} {\sigma})$, i.e.,==
+3. If $X \sim N(\mu,\sigma^2)$, then the d.f. $F(x)$ of $X$ is given by $\displaystyle \Phi(\frac{x-\mu} {\sigma})$, i.e.,
 
 $$
 F(x)=\displaystyle \Phi(\frac{x-\mu} {\sigma}).
@@ -738,7 +738,7 @@ $$
 The joint distribution function $F(x,y)$ is such that,
 
 1. For any $x_1<x_2$, $F(x_1,y)<F(x_2,y)$; for any $y_1<y_2$, $F(x,y_1)<F(x,y_2)$.
-2. ==$F(-\infty,y)=0$, $F(x,-\infty)=0$, $F(\infty,\infty)=1$.==
+2. $F(-\infty,y)=0$, $F(x,-\infty)=0$, $F(\infty,\infty)=1$.
 3. $\displaystyle \lim_{x \to x_0} F(x,y)=F(x_0,y)$,  $\displaystyle \lim_{y \to y_0} F(x,y)=F(x,y_0)$.
 
  ### 3.1.2 Discrete Random Vectors
@@ -776,7 +776,7 @@ The joint p.d.f. $f(x,y)$ has the following properties,
 
 ---
 
-The ==**marginal probability density functions** of $X$ and $Y$== are defined by,
+The **marginal probability density functions** of $X$ and $Y$ are defined by,
 $$
 f_X(x)= \int_{-\infty}^\infty f(x,y)dy \quad and \quad f_Y(y)= \int_{-\infty}^\infty f(x,y)dx.
 $$
@@ -899,7 +899,7 @@ $$
 
    ---
 
-   ==If $X \sim N(\mu_1, \sigma_1^2)$, $Y \sim N(\mu_2, \sigma_2^2)$ and $X \bot Y$, then,==
+   If $X \sim N(\mu_1, \sigma_1^2)$, $Y \sim N(\mu_2, \sigma_2^2)$ and $X \bot Y$, then,
    $$
    aX + bY + c \sim N(a\mu_1 + b\mu_2 + c, a^2\sigma_1^2 + b^2\sigma_2^2),
    $$
@@ -933,7 +933,7 @@ I have no idea.
 
 ## 3.6 Numerical Characteristics of Random Variables
 
-### ==3.6.1 Expectation of Sums and Products==
+### 3.6.1 Expectation of Sums and Products
 
 Let $X$ and $Y$ be jointly distributed random variables with p.f. $p(x,y)$ or p.d.f. $f(x,y)$ according to whether the variables are discrete or continuous. Then the expected value of a function $h(X,Y)$, denoted by $E[h(X,Y)]$, is given by,
 $$
@@ -1037,7 +1037,7 @@ $$
 
 ---
 
-**==Chebyshev's inequality==** : If $X$ is a random variable with finite mean $\mu$ and variance $\sigma^2$, then for any value $k>0$,
+**Chebyshev's inequality** : If $X$ is a random variable with finite mean $\mu$ and variance $\sigma^2$, then for any value $k>0$,
 $$
 P\{|X-\mu|\geqslant k\}\leqslant \frac{\sigma^2} {k^2}.
 $$
@@ -1161,15 +1161,15 @@ $$
 
 ### 5.3.1 Mean, Autocorrelation and Autocovariance
 
-If $X_t$ is a real stochastic process, then its ==mean function== is,
+If $X_t$ is a real stochastic process, then its mean function is,
 $$
 \mu_X(t)=E(X_t), t\in T.
 $$
-The ==variance function== is,
+The variance function is,
 $$
 \sigma^2_X(t)=Var(X_t).
 $$
-The ==autocorrelation function== is,
+The autocorrelation function is,
 $$
 R_X(t_1,t_2)=R_{XX}(t_1,t_2)=E(X_{t_1}X_{t_2}).
 $$
@@ -1195,6 +1195,6 @@ $$
 
 ---
 
-==**Hint**== 
+**Hint** 
 
 $\displaystyle cos(\alpha)cos(\beta)=\frac12 (cos(\alpha+\beta)+cos(\alpha-\beta))$

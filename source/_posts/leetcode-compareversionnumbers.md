@@ -4,7 +4,6 @@ date: 2017-08-01 19:46:53
 categories: Study
 tags:
 - leetcode
-mathjax: true
 ---
 ## Problem
 Compare two version numbers version1 and version2.

@@ -1,6 +1,6 @@
 ---
-title: Constructure of Waterbirds recognition interface server
-date: 2019-06-29 10:14:08
+title: Constructure of Waterbirds recognition interface service
+date: 2019-04-29 10:14:08
 categories: Study
 tag: 
   - CS

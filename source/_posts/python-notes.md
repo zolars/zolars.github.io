@@ -3,9 +3,8 @@ title: Python Learning Notes
 date: 2016-07-13 17:16:48
 categories: Study
 tags:
-- note
+- CS
 toc: true
-mathjax: true
 ---
 
 > 拥有一定C语言和编程基础，学习Python时的随手记。有一部分来自于[『Python入门指南』](http://www.pythondoc.com/pythontutorial3/)，有兴趣最好细致的阅读官方文档。  
