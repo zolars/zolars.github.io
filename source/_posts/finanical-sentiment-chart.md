@@ -13,7 +13,7 @@ Finanical Sentiment Chart aims to analyse influence between social sentiment and
 
 This project uses scraper with high performance to get large scale data of tweets. With these data, run sentiment analysis in order to generate a realtime update chart. The raw data is also saved in database, which may provide further analysis.
 
-![](https://raw.githubusercontent.com/zolars/typora-user-images/master/img/20191007211343.png)
+![](https://raw.githubusercontent.com/zolars/pic-bed/master/img/20191007211343.png)
 
 <!--more-->
 
@@ -39,7 +39,7 @@ What's more, this Web application is built as a financial analysis tool. Consequ
 
 I made a realtime scraper with high performance in order to catch data from [Twitter](https://www.twitter.com) and [Weibo](https://www.weibo.com). The data is saved in MySQL database and execute sentiment analysis with a pipeline.
 
-![MySQL Database](https://raw.githubusercontent.com/zolars/typora-user-images/master/20190707234203.png)
+![MySQL Database](https://raw.githubusercontent.com/zolars/pic-bed/master/20190707234203.png)
 
 After that, I build a light-wight Web application with Python Flask and ECharts. The application can be easily deployed on any server with python environment and it can run realtime, stably and automatically. I will give you the deploy method.
 
@@ -106,10 +106,10 @@ Find more about this project on my [GitHub](https://github.com/zolars/financial-
 ## How to use 'Advanced Search' to generate query?
 
 1. With this website, input any keywords you want to search for.
-    ![](https://raw.githubusercontent.com/zolars/typora-user-images/master/20190724022657.png)
+    ![](https://raw.githubusercontent.com/zolars/pic-bed/master/20190724022657.png)
 2. Click 'Search for' button.
 3. In the new page, copy the query you need as below:
-    ![](https://raw.githubusercontent.com/zolars/typora-user-images/master/20190724023017.png)
+    ![](https://raw.githubusercontent.com/zolars/pic-bed/master/20190724023017.png)
 
 ## Code Options
 

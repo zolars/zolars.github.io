@@ -5,8 +5,6 @@ categories: Study
 tags:
 - EE
 - RL
-toc: true
-mathjax: true
 ---
 
 I just finished the paper with Nanxin. It's a great cooperation for both of us, I guess. For me, I learned much about the UAV and combinatorial optimization by talking with his concept; For him, he found me, ~~just a good programmer~~, to establish simulation with basic algorithm or RL in CS field. 

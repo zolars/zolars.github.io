@@ -22,12 +22,12 @@ tags:
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=370 height=86 src="//music.163.com/outchain/player?type=2&id=459227467&auto=0&height=66"></iframe>
 
-![chengdu-memory(1)](https://raw.githubusercontent.com/zolars/typora-user-images/master/pic1.jpg)
+![chengdu-memory(1)](https://raw.githubusercontent.com/zolars/pic-bed/master/pic1.jpg)
 
-![chengdu-memory(2)](https://raw.githubusercontent.com/zolars/typora-user-images/master/pic2.jpg)
+![chengdu-memory(2)](https://raw.githubusercontent.com/zolars/pic-bed/master/pic2.jpg)
 
-![chengdu-memory(3)](https://raw.githubusercontent.com/zolars/typora-user-images/master/pic3.jpg)
+![chengdu-memory(3)](https://raw.githubusercontent.com/zolars/pic-bed/master/pic3.jpg)
 
-![chengdu-memory(4)](https://raw.githubusercontent.com/zolars/typora-user-images/master/pic4.jpg)
+![chengdu-memory(4)](https://raw.githubusercontent.com/zolars/pic-bed/master/pic4.jpg)
 
-![chengdu-memory(5)](https://raw.githubusercontent.com/zolars/typora-user-images/master/IMG_8989.jpg)
+![chengdu-memory(5)](https://raw.githubusercontent.com/zolars/pic-bed/master/IMG_8989.jpg)

@@ -12,7 +12,7 @@ mathjax: true
 
 The experiment is based on the principle of fine-grained recognition in **Bilinear CNN Models for Fine-grained Visual Recognition [[1]](#1)**. Using networks initialized from the ImageNet dataset followed by domain specific fine-tuning the author of this paper obtain 84.1% accuracy of the CUB-200-2011 dataset requiring only category labels at training time. 
 
-<img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/20190719090610.jpg"/>
+<img src="https://raw.githubusercontent.com/zolars/pic-bed/master/20190719090610.jpg"/>
 
 <!--more-->
 
@@ -103,11 +103,11 @@ On the new waterbirds dataset, the experiment obtained 96% accuracy for training
 1. As the paper pointed out, the model will confuse some categories. For birds whose main difference is in wingspan, habitat or sound, the model is difficult to make accurate classification. Other common confusions appear due to visually similarity. For example, the similar appearances of greater scaup and Tufted Duck.
 2. Especially among the waterbirds, the different sorts of females are extremely hard to distinct than different sorts males. We take the eurasian green-winged teal and the baikal teal as examples. As the following figure, the male eurasian green-winged teal and the baikal teal can be easily distinguished. However, the difference in texture characteristics is not obvious between female birds. These inconspicuous differences affect the model's accuracy, depending on the proportion of female waterbirds' data in the dataset.
 
-<div align="center"><img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/20190719090609.jpg" width="50%"/></div>
+<div align="center"><img src="https://raw.githubusercontent.com/zolars/pic-bed/master/20190719090609.jpg" width="50%"/></div>
 
 <p align="center">figure1. the male and female eurasian green-winged teal (Anas crecca)</p>
 
-<div align="center"><img src="https://raw.githubusercontent.com/zolars/typora-user-images/master/20190719090608.jpg" width="50%"/></div>
+<div align="center"><img src="https://raw.githubusercontent.com/zolars/pic-bed/master/20190719090608.jpg" width="50%"/></div>
 
 <p align="center">figure2. the male and female baikal teal (Sibirionetta formosa)</p>
 
