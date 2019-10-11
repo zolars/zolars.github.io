@@ -1,9 +1,9 @@
 ---
-title: Python Learning Note
+title: Python Learning Notes
 date: 2016-07-13 17:16:48
 categories: Study
 tags:
-- python
+- note
 toc: true
 mathjax: true
 ---

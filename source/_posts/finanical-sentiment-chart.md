@@ -3,7 +3,7 @@ title: Finanical Sentiment Chart <br> Easy to analysis Finance with Tweets' Sent
 date: 2019-07-01 23:41:07
 categories: Study
 tags:
-- Scrapy
+- scrapy
 - Web
 ---
 
@@ -13,7 +13,7 @@ Finanical Sentiment Chart aims to analyse influence between social sentiment and
 
 This project uses scraper with high performance to get large scale data of tweets. With these data, run sentiment analysis in order to generate a realtime update chart. The raw data is also saved in database, which may provide further analysis.
 
-![](https://raw.githubusercontent.com/zolars/pic-bed/master/img/20191007211343.png)
+![](https://raw.githubusercontent.com/zolars/pic-bed/master//20191007211343.png)
 
 <!--more-->
 

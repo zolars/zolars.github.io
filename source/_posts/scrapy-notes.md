@@ -1,9 +1,9 @@
 ---
-title: Scrapy Learning Note
+title: scrapy Learning Notes
 date: 2016-10-23 01:14:22
 categories: Study
 tags:
-- CS
+- note
 toc: true
 mathjax: true
 ---
