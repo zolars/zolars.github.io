@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <meta name="google-site-verification" content="hjbi_T0wsrqiYaOkhw9gchddCxq2bDftSgmoLvVCcgg">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Sans SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zolars.github.io","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","width":300,"display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Paper’s PrincipleThe experiment is based on the principle of fine-grained recognition in Bilinear CNN Models for Fine-grained Visual Recognition [1]. Using networks initialized from the ImageNet datas">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fine-grained bird classification experiment with the BCNN">
+<meta property="og:url" content="https://zolars.github.io/2019/01/08/cas-bird-bcnn/index.html">
+<meta property="og:site_name" content="Yifei&#39;s Blog">
+<meta property="og:description" content="Paper’s PrincipleThe experiment is based on the principle of fine-grained recognition in Bilinear CNN Models for Fine-grained Visual Recognition [1]. Using networks initialized from the ImageNet datas">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/zolars/pic-bed/master/20190719090610.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/zolars/pic-bed/master/20190719090609.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/zolars/pic-bed/master/20190719090608.jpg">
+<meta property="article:published_time" content="2019-01-08T07:41:28.000Z">
+<meta property="article:modified_time" content="2019-11-19T06:35:20.389Z">
+<meta property="article:author" content="Yifei">
+<meta property="article:tag" content="CV">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/zolars/pic-bed/master/20190719090610.jpg">
+
+<link rel="canonical" href="https://zolars.github.io/2019/01/08/cas-bird-bcnn/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>Fine-grained bird classification experiment with the BCNN | Yifei's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yifei's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="https://zolars.github.io/2019/01/08/cas-bird-bcnn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Yifei">
+      <meta itemprop="description" content="Just open a new door.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yifei's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          Fine-grained bird classification experiment with the BCNN
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-01-08 15:41:28" itemprop="dateCreated datePublished" datetime="2019-01-08T15:41:28+08:00">2019-01-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2019/01/08/cas-bird-bcnn/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/01/08/cas-bird-bcnn/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Paper’s-Principle"><a href="#Paper’s-Principle" class="headerlink" title="Paper’s Principle"></a>Paper’s Principle</h2><p>The experiment is based on the principle of fine-grained recognition in <strong>Bilinear CNN Models for Fine-grained Visual Recognition <a href="#1">[1]</a></strong>. Using networks initialized from the ImageNet dataset followed by domain specific fine-tuning the author of this paper obtain 84.1% accuracy of the CUB-200-2011 dataset requiring only category labels at training time. </p>
+<img src="https://raw.githubusercontent.com/zolars/pic-bed/master/20190719090610.jpg"/>
+
+<a id="more"></a>
+
+<p>Its key algorithm is as follows:</p>
+<blockquote>
+<p>It consists of two feature extractors based on CNNs whose outputs are multiplied using <strong>the outer product</strong> at each location of the image and pooled across locations to obtain an image descriptor. <strong>The outer product</strong> captures pairwise correlations between the feature channels and can model part-feature interactions.</p>
+<p>Moreover, the architecture can be easily trained end-to-end leading to significant improvements in performance.</p>
+<p>Since our model is linear in the outputs of two CNNs we call our approach bilinear CNNs.</p>
+</blockquote>
+<h2 id="Experiment-Approach"><a href="#Experiment-Approach" class="headerlink" title="Experiment Approach"></a>Experiment Approach</h2><h3 id="Reproducing"><a href="#Reproducing" class="headerlink" title="Reproducing"></a>Reproducing</h3><p>With the PyTorch framework, I reproduce the fine-grained classification accuracy, the author’s achievement, on CUB200-2011 dataset.</p>
+<p>The format of the training images is three-channel RGB 448*448, and the total number of features is 512.</p>
+<p>The model structure of BCNN is as follows:</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">(module): BCNN(</span><br><span class="line">    (features): Sequential(</span><br><span class="line">      (<span class="number">0</span>): Conv2d(<span class="number">3</span>, <span class="number">64</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), stride=(<span class="number">1</span>, <span class="number">1</span>), padding=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">      (<span class="number">1</span>): ReLU(inplace)</span><br><span class="line">      (<span class="number">2</span>): Conv2d(<span class="number">64</span>, <span class="number">64</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), stride=(<span class="number">1</span>, <span class="number">1</span>), padding=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">      (<span class="number">3</span>): ReLU(inplace)</span><br><span class="line">      (<span class="number">4</span>): MaxPool2d(kernel_size=<span class="number">2</span>, stride=<span class="number">2</span>, padding=<span class="number">0</span>, dilation=<span class="number">1</span>, ceil_mode=False)</span><br><span class="line">      (<span class="number">5</span>): Conv2d(<span class="number">64</span>, <span class="number">128</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), stride=(<span class="number">1</span>, <span class="number">1</span>), padding=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">      (<span class="number">6</span>): ReLU(inplace)</span><br><span class="line">      (<span class="number">7</span>): Conv2d(<span class="number">128</span>, <span class="number">128</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), stride=(<span class="number">1</span>, <span class="number">1</span>), padding=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">      (<span class="number">8</span>): ReLU(inplace)</span><br><span class="line">      (<span class="number">9</span>): MaxPool2d(kernel_size=<span class="number">2</span>, stride=<span class="number">2</span>, padding=<span class="number">0</span>, dilation=<span class="number">1</span>, ceil_mode=False)</span><br><span class="line">      (<span class="number">10</span>): Conv2d(<span class="number">128</span>, <span class="number">256</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), stride=(<span class="number">1</span>, <span class="number">1</span>), padding=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">      (<span class="number">11</span>): ReLU(inplace)</span><br><span class="line">      (<span class="number">12</span>): Conv2d(<span class="number">256</span>, <span class="number">256</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), stride=(<span class="number">1</span>, <span class="number">1</span>), padding=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">      (<span class="number">13</span>): ReLU(inplace)</span><br><span class="line">      (<span class="number">14</span>): Conv2d(<span class="number">256</span>, <span class="number">256</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), stride=(<span class="number">1</span>, <span class="number">1</span>), padding=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">      (<span class="number">15</span>): ReLU(inplace)</span><br><span class="line">      (<span class="number">16</span>): MaxPool2d(kernel_size=<span class="number">2</span>, stride=<span class="number">2</span>, padding=<span class="number">0</span>, dilation=<span class="number">1</span>, ceil_mode=False)</span><br><span class="line">      (<span class="number">17</span>): Conv2d(<span class="number">256</span>, <span class="number">512</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), stride=(<span class="number">1</span>, <span class="number">1</span>), padding=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">      (<span class="number">18</span>): ReLU(inplace)</span><br><span class="line">      (<span class="number">19</span>): Conv2d(<span class="number">512</span>, <span class="number">512</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), stride=(<span class="number">1</span>, <span class="number">1</span>), padding=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">      (<span class="number">20</span>): ReLU(inplace)</span><br><span class="line">      (<span class="number">21</span>): Conv2d(<span class="number">512</span>, <span class="number">512</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), stride=(<span class="number">1</span>, <span class="number">1</span>), padding=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">      (<span class="number">22</span>): ReLU(inplace)</span><br><span class="line">      (<span class="number">23</span>): MaxPool2d(kernel_size=<span class="number">2</span>, stride=<span class="number">2</span>, padding=<span class="number">0</span>, dilation=<span class="number">1</span>, ceil_mode=False)</span><br><span class="line">      (<span class="number">24</span>): Conv2d(<span class="number">512</span>, <span class="number">512</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), stride=(<span class="number">1</span>, <span class="number">1</span>), padding=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">      (<span class="number">25</span>): ReLU(inplace)</span><br><span class="line">      (<span class="number">26</span>): Conv2d(<span class="number">512</span>, <span class="number">512</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), stride=(<span class="number">1</span>, <span class="number">1</span>), padding=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">      (<span class="number">27</span>): ReLU(inplace)</span><br><span class="line">      (<span class="number">28</span>): Conv2d(<span class="number">512</span>, <span class="number">512</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), stride=(<span class="number">1</span>, <span class="number">1</span>), padding=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">      (<span class="number">29</span>): ReLU(inplace)</span><br><span class="line">    )</span><br><span class="line">    (fc): Linear(in_features=<span class="number">262144</span>, out_features=<span class="number">200</span>, bias=True)</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+
+<h2 id="Dataset-Introduction"><a href="#Dataset-Introduction" class="headerlink" title="Dataset Introduction"></a>Dataset Introduction</h2><p>The Waterbirds dataset includes 164 different sorts of waterbirds. And each category contains 100 pictures for training and 10 to 400 pictures for testing. After image enhancement and filtering, a total of 16,400 train data and 11,061 test data were included. The size of this dataset is 15.3GB.</p>
+<p>The formats of most of picture files are three-channel RGB images (jpg), and the others are RGBA format (png, tif). I pretreated all the photos to simple RGB format before starting training.</p>
+<p>Image enhancement was been used to augment the amount of training data of some of these categories. So some features may be interfered when implementing training. In addition, the test dataset of some categories is scarce, resulting in the accuracy of the test will be lower than the actual level.</p>
+<h2 id="Hyperparameters"><a href="#Hyperparameters" class="headerlink" title="Hyperparameters"></a>Hyperparameters</h2><p>For pre-training, the batch_size is 64; the epoch num is 55; And the weight decay is 1e-8.</p>
+<p>For fine-turn, the batch_size is 32; The epoch num is 25; And the weight decay is 1e-5.</p>
+<h2 id="Result-Analysis"><a href="#Result-Analysis" class="headerlink" title="Result Analysis"></a>Result Analysis</h2><p>Reproducing on CUB200-2011 dataset, the experiment obtained 91% accuracy for training and 84.1% accuracy for testing, which totally matches the results given by the paper. It costs almost 4h for the full training.</p>
+<p>On the new waterbirds dataset, the experiment obtained 96% accuracy for training and 87.7% accuracy for testing. The accuracy for testing was slightly lower than the target, 90%. The complete training and testing takes about 10 hours.</p>
+<h3 id="Advantages"><a href="#Advantages" class="headerlink" title="Advantages"></a>Advantages</h3><ol>
+<li>The recognition accuracy of the model is significantly higher than traditional approaches such as FC-CNN, FV-CNN. The fine-grained classification method can be used to distinct the waterbirds’ feet, ticks or textures.</li>
+<li>The model establishes end-to-end training, with low cost, high training performance and fast speed.</li>
+<li>Unsupervised training without the use of target detection tags to aid training. There are little requirements for the training set.</li>
+</ol>
+<h3 id="Issues"><a href="#Issues" class="headerlink" title="Issues"></a>Issues</h3><ol>
+<li>As the paper pointed out, the model will confuse some categories. For birds whose main difference is in wingspan, habitat or sound, the model is difficult to make accurate classification. Other common confusions appear due to visually similarity. For example, the similar appearances of greater scaup and Tufted Duck.</li>
+<li>Especially among the waterbirds, the different sorts of females are extremely hard to distinct than different sorts males. We take the eurasian green-winged teal and the baikal teal as examples. As the following figure, the male eurasian green-winged teal and the baikal teal can be easily distinguished. However, the difference in texture characteristics is not obvious between female birds. These inconspicuous differences affect the model’s accuracy, depending on the proportion of female waterbirds’ data in the dataset.</li>
+</ol>
+<div align="center"><img src="https://raw.githubusercontent.com/zolars/pic-bed/master/20190719090609.jpg" width="50%"/></div>
+
+<p align="center">figure1. the male and female eurasian green-winged teal (Anas crecca)</p>
+
+<div align="center"><img src="https://raw.githubusercontent.com/zolars/pic-bed/master/20190719090608.jpg" width="50%"/></div>
+
+<p align="center">figure2. the male and female baikal teal (Sibirionetta formosa)</p>
+
+<ol start="3">
+<li>Lack on typical feature or the scarce data quantity makes the judgment of the model difficult. Such as the misrecognition between Phalacrocorax carbo and Phalacrocorax pelagicus.</li>
+</ol>
+<h2 id="Optimization-Target"><a href="#Optimization-Target" class="headerlink" title="Optimization Target"></a>Optimization Target</h2><ol>
+<li>Noticing that deploying the model costs too many time, the next goal is to realize the feasible and high-quality method to reduce time cost on rebuilding the model. When using the model to identify birds, can the model instance be kept in memory once completely loaded?</li>
+<li>For the second issue above, I suppose to classify the male and female data. The male birds and female birds are also considered as two types during training. Extracting their feature points separately will significantly improve the recognition accuracy of the model.</li>
+<li>Call for additional size of dataset in specific categories. <div id='1'></div></li>
+</ol>
+<blockquote>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li>Lin, Tsung-Yu, Aruni RoyChowdhury, and Subhransu Maji. “Bilinear cnn models for fine-grained visual recognition.” Proceedings of the IEEE international conference on computer vision. 2015.</li>
+</ol>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/CV/" rel="tag"># CV</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/11/19/cas-airline/" rel="prev" title="Python ❤ Echarts - Making an airline Echarts">
+      <i class="fa fa-chevron-left"></i> Python ❤ Echarts - Making an airline Echarts
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/03/08/spring-in-beiping/" rel="next" title="北平的春天">
+      北平的春天 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Paper’s-Principle"><span class="nav-text">Paper’s Principle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experiment-Approach"><span class="nav-text">Experiment Approach</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reproducing"><span class="nav-text">Reproducing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dataset-Introduction"><span class="nav-text">Dataset Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hyperparameters"><span class="nav-text">Hyperparameters</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Result-Analysis"><span class="nav-text">Result Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Advantages"><span class="nav-text">Advantages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Issues"><span class="nav-text">Issues</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optimization-Target"><span class="nav-text">Optimization Target</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yifei"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Yifei</p>
+  <div class="site-description" itemprop="description">Just open a new door.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:Yif.Xin@gmail.com" title="Email → mailto:Yif.Xin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/zolars" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zolars" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yifei</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://zolars.github.io/2019/01/08/cas-bird-bcnn/',]
+      });
+      });
+  </script>
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://zolars.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://zolars.github.io/2019/01/08/cas-bird-bcnn/";
+    this.page.identifier = "2019/01/08/cas-bird-bcnn/";
+    this.page.title = "Fine-grained bird classification experiment with the BCNN";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://zolars.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

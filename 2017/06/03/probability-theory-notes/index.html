@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <meta name="google-site-verification" content="hjbi_T0wsrqiYaOkhw9gchddCxq2bDftSgmoLvVCcgg">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Sans SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zolars.github.io","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","width":300,"display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="This is the course notes for Probability Theory and Stochastic Processes.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Probability Theory Notes">
+<meta property="og:url" content="https://zolars.github.io/2017/06/03/probability-theory-notes/index.html">
+<meta property="og:site_name" content="Yifei&#39;s Blog">
+<meta property="og:description" content="This is the course notes for Probability Theory and Stochastic Processes.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-06-03T06:42:20.000Z">
+<meta property="article:modified_time" content="2019-11-26T13:01:37.991Z">
+<meta property="article:author" content="Yifei">
+<meta property="article:tag" content="math">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://zolars.github.io/2017/06/03/probability-theory-notes/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>Probability Theory Notes | Yifei's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yifei's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="https://zolars.github.io/2017/06/03/probability-theory-notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Yifei">
+      <meta itemprop="description" content="Just open a new door.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yifei's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          Probability Theory Notes
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-06-03 14:42:20" itemprop="dateCreated datePublished" datetime="2017-06-03T14:42:20+08:00">2017-06-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2017/06/03/probability-theory-notes/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/06/03/probability-theory-notes/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>This is the course notes for Probability Theory and Stochastic Processes.</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="Chapter-1-Event-and-Their-Probabilities"><a href="#Chapter-1-Event-and-Their-Probabilities" class="headerlink" title="Chapter 1 Event and Their Probabilities"></a>Chapter 1 Event and Their Probabilities</h1><h2 id="1-1-The-History-of-Probability"><a href="#1-1-The-History-of-Probability" class="headerlink" title="1.1 The History of Probability"></a>1.1 The History of Probability</h2><h2 id="1-2-Experiment-Sample-Space-and-Random-Event"><a href="#1-2-Experiment-Sample-Space-and-Random-Event" class="headerlink" title="1.2 Experiment, Sample Space and Random Event"></a>1.2 Experiment, Sample Space and Random Event</h2><h3 id="1-2-1-Basic-Definitions"><a href="#1-2-1-Basic-Definitions" class="headerlink" title="1.2.1 Basic Definitions"></a>1.2.1 Basic Definitions</h3><ul>
+<li><p>Random experiment</p>
+<ol>
+<li><strong>Repeatability</strong></li>
+<li><strong>Predictability</strong></li>
+<li><strong>Uncertainty</strong></li>
+</ol>
+</li>
+<li><p>Sample place</p>
+<p>The set of all possible outcomes of an ramdom experiment is known as the sample place.</p>
+</li>
+<li><p>Inevitable events &amp; Impossible events</p>
+<p>Those events must / can not occur in the experiment are called the inevitable / impossible events.</p>
+</li>
+</ul>
+<h3 id="1-2-2-Events-as-Sets"><a href="#1-2-2-Events-as-Sets" class="headerlink" title="1.2.2 Events as Sets"></a>1.2.2 Events as Sets</h3><p>Here we list their connections and differences in the following Table.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Typical notation</th>
+<th align="left">Set jargon</th>
+<th align="left">Probability jargon</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$\Omega$</td>
+<td align="left">Collection of objects</td>
+<td align="left">Sample space</td>
+</tr>
+<tr>
+<td align="center">$\omega$</td>
+<td align="left">Member of $\Omega$</td>
+<td align="left">Elementary event, outcome</td>
+</tr>
+<tr>
+<td align="center">$A$</td>
+<td align="left">Subset of $\Omega$</td>
+<td align="left">Events that some outcome in $A$ occurs</td>
+</tr>
+<tr>
+<td align="center">$A$ or $\overline{A} $</td>
+<td align="left">Complement of $A$</td>
+<td align="left">Event that no outcome in $A$ occurs</td>
+</tr>
+<tr>
+<td align="center">$A \cap B$</td>
+<td align="left">Intersection</td>
+<td align="left">Both $A$ and $B$</td>
+</tr>
+<tr>
+<td align="center">$A \cup B$</td>
+<td align="left">Union</td>
+<td align="left">Either $A$ or $B$ or both</td>
+</tr>
+<tr>
+<td align="center">$A - B$</td>
+<td align="left">Difference</td>
+<td align="left">$A$, but no $B$</td>
+</tr>
+<tr>
+<td align="center">$A \subseteq B$</td>
+<td align="left">Inclusion</td>
+<td align="left">If $A$, then $B$</td>
+</tr>
+<tr>
+<td align="center">$\varnothing$</td>
+<td align="left">Enpty set</td>
+<td align="left">Impossible event</td>
+</tr>
+<tr>
+<td align="center">$\Omega$</td>
+<td align="left">Whole space</td>
+<td align="left">Certain set</td>
+</tr>
+</tbody></table>
+<hr>
+<p>Let $A$, $B$, $C$ be the random events of experiment $E$. The operations of the events will satisfy the following rules,</p>
+<ul>
+<li><p>Commutatively</p>
+<p>$A \cup B = B \cup A, AB=BA.$</p>
+</li>
+<li><p>Associatively</p>
+<p>$A \cup (B \cup C) = (A \cup B)  \cup C = A  \cup B  \cup C.$</p>
+<p>$A(BC) = (AB)C = ABC.$</p>
+</li>
+<li><p>Distributively</p>
+<p>$A \cup (B \cap C) = (A \cup B) \cap (A \cup C).$</p>
+<p>$A(B \cup C) = (AB) \cup (AC).$</p>
+</li>
+<li><p>De Morgan’s law</p>
+<p>$\overline{A \cup B}=\overline{A} \cap \overline{B}, \overline{A \cap B}=\overline{A} \cup \overline{B}.$</p>
+</li>
+</ul>
+<h2 id="1-3-Probabilities-Defined-on-Events"><a href="#1-3-Probabilities-Defined-on-Events" class="headerlink" title="1.3 Probabilities Defined on Events"></a>1.3 Probabilities Defined on Events</h2><h3 id="1-3-1-Classical-Probabilities"><a href="#1-3-1-Classical-Probabilities" class="headerlink" title="1.3.1 Classical Probabilities"></a>1.3.1 Classical Probabilities</h3><p>Generally, a random experiment $E$ is <strong>classical</strong> if,</p>
+<ol>
+<li>$E$ contains only different limited basic events, that is, $\Omega = {\omega_1, \omega_2, \omega_3, \dotsb \omega_n} $. We call this kind of sample space <strong>simple space</strong>.</li>
+<li>All outcomes are equally likely to occur.</li>
+</ol>
+<p>That is, for classical random experiment $E$, $\Omega = {\omega_1, \omega_2, \omega_3, \dotsb \omega_n} $, we define the probability of event $A$ as,</p>
+<p>$$<br>P(A)=\frac{ #A} { #\Omega}.<br>$$</p>
+<p>where <code>#A</code> means the number of all possible outcomes of event $A$, <code>#Ω</code> Means the number of all possible outcomes of sample space $\Omega$. The probability of impossible event is defined as,</p>
+<p>$$<br>P(\varnothing)=0.<br>$$</p>
+<h3 id="1-3-2-Geometric-Probabilities"><a href="#1-3-2-Geometric-Probabilities" class="headerlink" title="1.3.2 Geometric Probabilities"></a>1.3.2 Geometric Probabilities</h3><p>Generally, a random experiment $E$ is called to be <strong>geometric</strong> if,</p>
+<ol>
+<li>The sample space is a a measurable (such as length, area, volume, etc.) region, i.e., $0&lt;L(\Omega)&lt;\infty$.</li>
+<li>The probability of every event $A\subset\Omega$ is proportional to the measure $L(A)$ and has nothing to do with its position and shape.</li>
+</ol>
+<p>In this case, we define the probability of event $A$ as,</p>
+<p>$$<br>P(A)=\frac{L(A)} {L(\Omega)} \text{  and } P(\varnothing)=0.<br>$$</p>
+<hr>
+<p>For Geomatrical random experiment $E$, the probability has the following properties,</p>
+<ol>
+<li><p>For every event $A$, $P(A)\geqslant 0$.</p>
+</li>
+<li><p>$P(\Omega)=1$.</p>
+</li>
+<li><p>For every countable disjoint events $A_1, A_2, \dotsb ,$</p>
+<p>$$<br>P (\text{ } \bigcup^{\infty}<em>{i=1}A_i \text{ }) = \sum^{\infty}</em>{i=1}P(A_i).<br>$$</p>
+</li>
+</ol>
+<h3 id="1-3-3-The-Frequency-Interpretation-of-Probabilities"><a href="#1-3-3-The-Frequency-Interpretation-of-Probabilities" class="headerlink" title="1.3.3 The Frequency Interpretation of Probabilities"></a>1.3.3 The Frequency Interpretation of Probabilities</h3><p>Let $E$ be a random experiment, $A$ be a random event. Suppose that $E$ was repeated $n$ times under similar conditions. Let $f_n(A)$ be the times that $A$ occurs. The ration</p>
+<p>$$<br>F_n(A)=\frac{f_n(A)} {n}<br>$$</p>
+<p>is said to be the <strong>frequency</strong> of event $A$ in the $n$ trials. If $n$ is large enough, the probability of event $A$ will be approximated by $F_n(A)$.</p>
+<hr>
+<p>For a random experiment $E$, the probability has the following properties,</p>
+<ol>
+<li><p>For every event $A$, $F_n(A)\geqslant 0$.</p>
+</li>
+<li><p>$F_n(\Omega)=1$.</p>
+</li>
+<li><p>For every countable disjoint events $A_1, A_2,  \dotsb  , A_n,$<br>$$<br>F_n (\text{ } \bigcup^{\infty}<em>{i=1}A_i \text{ }) = \sum^{\infty}</em>{i=1}F_n(A_i).<br>$$</p>
+</li>
+</ol>
+<h2 id="1-4-Probability-Space"><a href="#1-4-Probability-Space" class="headerlink" title="1.4 Probability Space"></a>1.4 Probability Space</h2><h3 id="1-4-1-Axiomatic-Definition-of-Probability"><a href="#1-4-1-Axiomatic-Definition-of-Probability" class="headerlink" title="1.4.1 Axiomatic Definition of Probability"></a>1.4.1 Axiomatic Definition of Probability</h3><p>A collection $\mathscr{F} $ of subsets of $\Omega$ is a $\sigma$-<strong>algebra</strong> if,</p>
+<ol>
+<li><p>$\Omega \in \mathscr{F} $.</p>
+</li>
+<li><p>$F \in \mathscr{F} \Longrightarrow \overline{F} \in \mathscr{F} $.</p>
+</li>
+<li><p>If $F_n$ is a countable collection of sets, $n=1,2, \dotsb$ such that $F_n \in \Omega$ for all n, then,</p>
+<p>$$<br>\bigcup_{n}F_n \in \mathscr{F}<br>$$</p>
+</li>
+</ol>
+<hr>
+<p>Let $P(A) (A \in \mathscr{F})$ be a non-negative set function on the $\sigma$-algebra $\mathscr{F} $. $P(A)$ is called the probability measure or <strong>probability of event</strong> $A$ if it satisfies the following three axioms,</p>
+<ol>
+<li><p>For every $A \in \mathscr{F}, P(A) \geqslant 0$.</p>
+</li>
+<li><p>$P(\Omega)=1$.</p>
+</li>
+<li><p>(countable additivity) For every infinite sequence of countable disjoint events $A_1, A_2, \dotsb ,$<br>$$<br>P (\text{ } \bigcup^{\infty}<em>{i=1}A_i \text{ }) = \sum^{\infty}</em>{i=1} P(A_i).<br>$$<br>The set in $\sigma$-algebra $\mathscr{F} $ are called events. $\mathscr{F} $ is called to be the algebra of events. The triple($\Omega, \mathscr{F}, P$) is a <strong>probability space</strong> or <strong>probability triple</strong>.</p>
+</li>
+</ol>
+<h3 id="1-4-2-Properties-of-Probability"><a href="#1-4-2-Properties-of-Probability" class="headerlink" title="1.4.2 Properties of Probability"></a>1.4.2 Properties of Probability</h3><ul>
+<li><p>$P(\varnothing) = 0$</p>
+</li>
+<li><p>For every finite sequence of countable disjoint events $A_1, A_2,  \dotsb , A_n,$</p>
+<p>$$<br>P (\text{ } \bigcup^{n}<em>{i=1}A_i \text{ }) = \sum^{n}</em>{i=1} P(A_i).<br>$$</p>
+</li>
+<li><p>For every event $A$, $P(\overline{A}) = 1 - P(A)$.</p>
+</li>
+<li><p>If $A \subset B$, then $P(A - B) = P(B) - P(A) \text{ } and \text{ } P(A) \leqslant P(B)$.</p>
+</li>
+<li><p>For every event $A$, $0 \leqslant P(A) \leqslant 1$.</p>
+</li>
+<li><p>For every two events $A$ and $B$,<br>$$<br>P(A \cup B) = P(A) + P(B) - P(AB).<br>$$</p>
+</li>
+</ul>
+<h2 id="1-5-Conditional-Probabilities"><a href="#1-5-Conditional-Probabilities" class="headerlink" title="1.5 Conditional Probabilities"></a>1.5 Conditional Probabilities</h2><h3 id="1-5-1-The-Definition-of-Conditional-Probability"><a href="#1-5-1-The-Definition-of-Conditional-Probability" class="headerlink" title="1.5.1 The Definition of Conditional Probability"></a>1.5.1 The Definition of Conditional Probability</h3><p>Given two events $A$ and $B$ with $P(B) &gt; 0$, the <strong>conditional probability of</strong> $A$ <strong>given</strong> $B$ is defined as the quotient of the joint probability of $A$ and $B$, and the probability of $B$,</p>
+<p>$$<br>P(A|B) = \frac{P(AB)} {P(B)}<br>$$</p>
+<hr>
+<p>If $P(B)&gt;0$, then the conditional probability $P(A|B)$ is also a probability, that is,</p>
+<ol>
+<li><p>For every event $A$, $P(A|B) \geqslant 0$.</p>
+</li>
+<li><p>$P(A|B)=1$.</p>
+</li>
+<li><p>For every infinite sequence of countable disjoint events $A_1, A_2,  \dotsb ,$<br>$$<br>P (\text{ } \bigcup^{\infty}<em>{i=1}A_i|B \text{ }) = \sum^{\infty}</em>{i=1} P(A_i|B).<br>$$</p>
+</li>
+</ol>
+<p>If $P(B) &gt; 0$, then,</p>
+<ol>
+<li><p>$P(\varnothing|B)=0$.</p>
+</li>
+<li><p>For every finite sequence of countable disjoint events $A_1, A_2,  \dotsb , A_n,$<br>$$<br>P (\text{ } \bigcup^{n}<em>{i=1}A_i|B \text{ }) = \sum^{n}</em>{i=1} P(A_i|B).<br>$$</p>
+</li>
+</ol>
+<h3 id="1-5-2-The-Multiplication-Rule"><a href="#1-5-2-The-Multiplication-Rule" class="headerlink" title="1.5.2 The Multiplication Rule"></a>1.5.2 The Multiplication Rule</h3><p>Assume that $P(B)&gt;0$, then,</p>
+<p>$$<br>P(AB)=P(B) \cdot P(A|B)<br>$$</p>
+<p>Or if $P(A)&gt;0$, then,</p>
+<p>$$<br>P(AB)=P(A) \cdot P(B|A)<br>$$</p>
+<h3 id="1-5-3-Total-Probability-Formula"><a href="#1-5-3-Total-Probability-Formula" class="headerlink" title="1.5.3 Total Probability Formula"></a>1.5.3 Total Probability Formula</h3><p>Suppose that the events $B_1, B_2, \dotsb, B_n$ form a partition of the sample space $\Omega$ and $P(B_i)&gt;0$ for $i=1,2,\dotsb, n$. Then, for every event $A$ in $\Omega$,</p>
+<p>$$<br>P(A)=\sum^n_{i=1} {P(Bi)P(A|B_i)}<br>$$</p>
+<h3 id="1-5-4-Bayes’-Theorem"><a href="#1-5-4-Bayes’-Theorem" class="headerlink" title="1.5.4 Bayes’ Theorem"></a>1.5.4 Bayes’ Theorem</h3><p>Let the events $B_1, B_2, \dotsb, B_n$ form a partition of the sample space $\Omega$ such that $P(B_i)&gt;0$ for $i=1,2,\dotsb,n$, and let $A$ be an event such that $P(A)&gt;0$. Then, for $i=1,2,\dotsb,n,$</p>
+<p>$$<br>P(B_i|A)=\frac{P(B_i)P(A|B_i)} {\sum^n_{j=1}P(A|B_j)}<br>$$</p>
+<h2 id="1-6-Independence-of-Events"><a href="#1-6-Independence-of-Events" class="headerlink" title="1.6 Independence of Events"></a>1.6 Independence of Events</h2><h3 id="1-6-1-Independence-of-Events"><a href="#1-6-1-Independence-of-Events" class="headerlink" title="1.6.1 Independence of Events"></a>1.6.1 Independence of Events</h3><p>Two events $A$ and $B$ are independent if,</p>
+<p>$$<br>P(AB)=P(A)P(B).<br>$$</p>
+<p>Suppose that $A$ and $B$ are disjoint events for an experiment, each with positive probability. Then $A$ and $B$ are dependent.</p>
+<p>If $A$ and $B$ are independent events in an experiment, then each of the following pairs of events is independent,</p>
+<ol>
+<li>$\overline{A} $ and $B$.</li>
+<li>$A$ and $\overline{B} $.</li>
+<li>$\overline{A} $ and $\overline{B} $.</li>
+</ol>
+<h3 id="1-6-2-Independence-of-Several-Events"><a href="#1-6-2-Independence-of-Several-Events" class="headerlink" title="1.6.2 Independence of Several Events"></a>1.6.2 Independence of Several Events</h3><p>Three events $A_1, A_2, \dotsb,A_n$ in the sample space $S$ of a random experiment are said to be <strong>mutually independent</strong> (or independent) if,</p>
+<p>$$<br>P(A_iA_j)=P(A_i)P(A_j) \[2ex]<br>P(A_1A_2 \dotsb A_n)=P(A_1)P(A_2) \dotsb P(A_n)<br>$$</p>
+<p>Events $A_1, A_2, \dotsb,A_n$ are said to be <strong>pairwise independent</strong> if the first three equations hold.</p>
+<h3 id="1-6-3-Bernoulli-Trial"><a href="#1-6-3-Bernoulli-Trial" class="headerlink" title="1.6.3 Bernoulli Trial"></a>1.6.3 Bernoulli Trial</h3><p>A <strong>Bernoulli experiment</strong> $E$ is such kind of random experiment, the outcome of which can be classified in but one of two mutually exclusive and exhaustive ways. Mainly, success (denoted by $S$) or failure (denoted by $F$).</p>
+<p>The outcomes of $E_n$ are the $2^n$ sequences of length $n$. The number of outcomes of $E_n$ that contains a exactly $k$ times is given by the binomial coefficient,</p>
+<p>$$<br>\begin{pmatrix} n \ k \end{pmatrix} =\frac{n!} {k!(n-k)!}<br>$$</p>
+<p>The probability that the outcome of an experiment that consists of $n$ Bernoulli trails has $k$ successes and $n-k$ failures is given by,</p>
+<p>$$<br>P_n(k)=P_n(#S=k)=<br>\begin{pmatrix} n \ k \end{pmatrix}<br>~ p^k ~ q^{n-k}<br>$$</p>
+<h1 id="Chapter-2-Random-Variable"><a href="#Chapter-2-Random-Variable" class="headerlink" title="Chapter 2 Random Variable"></a>Chapter 2 Random Variable</h1><h2 id="2-1-The-Definition-of-a-Random-Variable"><a href="#2-1-The-Definition-of-a-Random-Variable" class="headerlink" title="2.1 The Definition of a Random Variable"></a>2.1 The Definition of a Random Variable</h2><p>A <strong>random variable</strong> is a function that assigns a real number to each outcome in the sample space.</p>
+<p>A random variable is said to be of <strong>discrete type</strong> if the number of different values it can take is finite or countably infinite.</p>
+<h2 id="2-2-The-Distribution-Function-of-a-Random-Variable"><a href="#2-2-The-Distribution-Function-of-a-Random-Variable" class="headerlink" title="2.2 The Distribution Function of a Random Variable"></a>2.2 The Distribution Function of a Random Variable</h2><h3 id="2-2-1-The-Definition-and-Properties-of-Distribution-Function"><a href="#2-2-1-The-Definition-and-Properties-of-Distribution-Function" class="headerlink" title="2.2.1 The Definition and Properties of Distribution Function"></a>2.2.1 The Definition and Properties of Distribution Function</h3><p>We can denote the probability that the values of $X$ belong to the subset $I$ by $P(X \in I)$. Then $P(X \in I)$ is equal to the probability that the outcome $\omega$ of the experiment will be such that $X(\omega) \in I$. In symbols,</p>
+<p>$$<br>P(X \in I) = P(\omega : X(\omega) \in I).<br>$$</p>
+<p>The function $F(x)$ that associates with each real number $x$ the probability $P(X \leqslant x )$ that the random variable $X$ takes on a value smaller than or equal to this number is called the <strong>distribution function</strong> of $X$. That is,</p>
+<p>$$<br>F(x)=P(X \leqslant x), \forall ~ x \in R.<br>$$</p>
+<p><strong>d.f.</strong> : distribution function.</p>
+<p><strong>c.d.f.</strong> : cumulative distribution function.</p>
+<hr>
+<p>The d.f. $F(x)$ of every random variable $X$ has the following three properties,</p>
+<ol>
+<li>It is nondecreasing as $x$ increases; that is, if $x_1 &lt; x_2$, then $F(x_1) \leqslant F(x_2)$.</li>
+<li>$\lim_{x \to -\infty} F(x) = 0$ and $\lim_{x \to + \infty} F(x) = 1$.</li>
+<li>It is always right-continuous; that is, $F(x) = F(x^+)$ at every point $x$.</li>
+</ol>
+<hr>
+<p>For every value $x$,</p>
+<p>$$<br>P(X=x) = F(x)-F(x^-) \qquad and \qquad P(X \geqslant x) = 1 - F(x^-).<br>$$</p>
+<p>For all values $x_1$ and $x_2$ such that $x_1 &lt; x_2$,</p>
+<p>$$<br>P(x_1 &lt; X &lt; x_2) = F(x^-_2) - F(x_1), \<br>P(x_1 \leqslant X &lt; x_2) = F(x^-_2) - F(x^-_1), \<br>P(x_1 \leqslant X \leqslant x_2) = F(x_2) - F(x^-_1).<br>$$</p>
+<h4 id="Discrete-Case"><a href="#Discrete-Case" class="headerlink" title="Discrete Case"></a><u>Discrete Case</u></h4><p>For a discrete random variable $X$, we define the <strong>probability (mass) function</strong> $p(x)$ of $X$ by,</p>
+<p>$$<br>p(x) = P(X=x).<br>$$</p>
+<p><strong>p.f.</strong> : probability function.</p>
+<hr>
+<p>Let ${x_1, x_2, \dotsb} $ be the set of possible values of the discrete random variable $X$. The function $p$ has the following properties,</p>
+<ol>
+<li>$p(x_k) \leqslant 0$ for all $x_k$; $p(x)=0$ for all other value $x$.</li>
+<li>$\sum^\infty_{k=1}p(x_k)=1$.</li>
+</ol>
+<p>If $X$ has a discrete distribution, the probability of each subset $I$ of the real line can be determined from the relation,</p>
+<p>$$<br>P(X \in I) = \sum_{x_k\in I} p(x_k).<br>$$</p>
+<p>The relationship between d.f. $F(x)$ and p.f. $p(x)$ of $X$ is,</p>
+<p>$$<br>F(x)=P(X \leqslant x) = \sum_{x_k \leqslant x} p(x_k).<br>$$</p>
+<h4 id="Continuous-Case"><a href="#Continuous-Case" class="headerlink" title="Continuous Case"></a><u>Continuous Case</u></h4><p>We call $X$ a continuous random variable if there is a function $f$ defined for all $x \in R$ and having the following properties,</p>
+<ol>
+<li><p>$f(x) \leqslant 0$ for any real number $x$.</p>
+</li>
+<li><p>If $I$ is any subset of $R$, then,</p>
+</li>
+<li><p>$$<br>P(X \in I) = \int_I{f(x)dx},<br>$$</p>
+<p>Where $f(x)$ is called the <strong>probability density function</strong>.</p>
+</li>
+</ol>
+<p><strong>p.d.f.</strong> : probability density function.</p>
+<hr>
+<p>If $f$ is a p.d.f. pf the r.v. $X$, then,</p>
+<p>$$<br>P(a \leqslant X \leqslant b) = \int^a_b{f(x)dx}.<br>$$</p>
+<p>If $I=(-\infty,x]$,then the distribution function $F$ of $X$ is given by,</p>
+<p>$$<br>F(x) = P(X \leqslant x) = \int^x_{-\infty} {f(x)dx}.<br>$$</p>
+<hr>
+<p><strong>Remark</strong></p>
+<ol>
+<li><p>Indeed, $f$ does not give the probability that the random variable $X$ takes on the value $x$. The d.f. $F(x)$ of continuous r.v. $X$ is continuous since $P(X=x)=0$.</p>
+</li>
+<li><p>By using equation $\lim_{x \to + \infty} F(x) = 1$, we get,</p>
+<p>$$<br>\int^{\infty}_{-\infty}f(x)dx = F(\infty) = 1.<br>$$</p>
+<p>To be a p.d.f. pf some contiuous randome variables, the nonnegative function $f(x)$ needs satisfy this equation.</p>
+</li>
+<li><p>Moreover, we also deduce that,</p>
+<p>$$<br>\frac{d} {dx}F(x)=f(x),<br>$$</p>
+<p>for any $x$ where $F(x)$ is differentiable.</p>
+<p>When $F(x)$ is not differentiable at point $P$, so $f(x)=0$ at point $P$.</p>
+</li>
+</ol>
+<h3 id="2-2-2-The-Distribution-Function-of-Function-of-a-Random-Variable"><a href="#2-2-2-The-Distribution-Function-of-Function-of-a-Random-Variable" class="headerlink" title="2.2.2 The Distribution Function of Function of a Random Variable"></a>2.2.2 The Distribution Function of Function of a Random Variable</h3><h4 id="Discrete-Case-1"><a href="#Discrete-Case-1" class="headerlink" title="Discrete Case"></a><u>Discrete Case</u></h4><p>$$<br>p_Y(y)= P(Y = y) = P(g(X) = y) = \sum_{x:g(x)=y}p(x).<br>$$</p>
+<h4 id="Continuous-Case-1"><a href="#Continuous-Case-1" class="headerlink" title="Continuous Case"></a><u>Continuous Case</u></h4><p><strong>The distribution function method</strong> is a the usual way to obtian p.d.f. of a function of a continuous random variable. This method can be divided into four steps:</p>
+<ol>
+<li>Transform the event ${Y \leqslant y} $ to ${ g(X) \leqslant y} $.</li>
+<li>Transform the event ${g(X) \leqslant y} $ to ${ g(X) \leqslant I_y} $, where $I_y = {x:g(x) \leqslant y} $.</li>
+<li>Calculate the probability $P(X \in I_y)$, which is just the d.f. $F(y)(=P(Y \leqslant y))$ of $Y$.</li>
+<li>Obtain p.d.f. $f(y)$ of $Y$ by $f(x)=F’(x)$.</li>
+</ol>
+<hr>
+<p>Let $X$ be a continuous random variable having p.d.f. $f_X$. Suppose that $g(x)$ is a strictly monotonic (increasing or decreasing), differentiable (and thus continuous) function of $x$. Then the random variable $Y$ defined by $Y = g(X)$ has a p.d.f. given by,</p>
+<p>$$<br>f_Y(y) =<br>\begin{cases}<br>f_X(g^{-1}(y))</p>
+<p>\left|<br>\cfrac{d} {dx}g^{-1}(y)<br>\right|</p>
+<p>&amp; \text{if $y=g(x)$ for some $x$,} \[2ex]<br>0 &amp; \text{if $y \neq g(x)$ for all $x$,}<br>\end{cases}<br>$$</p>
+<p>where $x=g^{-1}(y)$ is defined to equal that value of $x$ such that $g(x)=y$.</p>
+<h2 id="2-3-Mathematical-Expectation-and-Variance"><a href="#2-3-Mathematical-Expectation-and-Variance" class="headerlink" title="2.3 Mathematical Expectation and Variance"></a>2.3 Mathematical Expectation and Variance</h2><h3 id="2-3-1-Expectation-of-a-Random-Variable"><a href="#2-3-1-Expectation-of-a-Random-Variable" class="headerlink" title="2.3.1 Expectation of a Random Variable"></a>2.3.1 Expectation of a Random Variable</h3><p>The <strong>expectation</strong> (the mean or the <strong>expected value</strong>) of a random variable $X$ is given by,</p>
+<p>$$<br>\mu := E(X) =<br>\begin{cases}<br>\displaystyle{\sum^\infty_{i=1}x_ip(x_i)} &amp; \text{if $X$ is discrete,} \[2ex]<br>\displaystyle{\int^{\infty}_{-\infty}xf(x)dx}   &amp; \text{if $X$ is continuous.}<br>\end{cases}<br>$$</p>
+<h3 id="2-3-2-Expectation-of-Function-of-a-Random-Variable"><a href="#2-3-2-Expectation-of-Function-of-a-Random-Variable" class="headerlink" title="2.3.2 Expectation of Function of a Random Variable"></a>2.3.2 Expectation of Function of a Random Variable</h3><p>The mathematical expectation of a function $g(X)$ of a random variable $X$ can be calculated by,</p>
+<p>$$<br>E[g(X)] =<br>\begin{cases}<br>\displaystyle{\sum^\infty_{i=1}g(x_i)p(x_i)}   &amp; \text{if $X$ is discrete,} \[2ex]<br>\displaystyle{\int^\infty_{-\infty}g(x)f(x)dx} &amp; \text{if $X$ is continuous.}<br>\end{cases}<br>$$</p>
+<hr>
+<p>The mathematical expectation $E(x)$ has the following properties,</p>
+<ol>
+<li>$E(c)=c.$</li>
+<li>Suppose that $g(X)$ is a function of the random variable $X$. Then for all constants $a$ and $b$,</li>
+</ol>
+<p>$$<br>E[ag(X) + b] = aE[g(X)] + b.<br>$$</p>
+<p>​ Specially, if $g(X)=X$, then,</p>
+<p>$$<br>E(aX+b)=aE(X)+b.<br>$$</p>
+<h3 id="2-3-3-Variance-of-a-Random-Variable"><a href="#2-3-3-Variance-of-a-Random-Variable" class="headerlink" title="2.3.3 Variance of a Random Variable"></a>2.3.3 Variance of a Random Variable</h3><p>The <strong>variance</strong> of a random variable $X$ is defined by,</p>
+<p>$$<br>\sigma^2 \equiv E[(X-E(X))^2] = Var(X) =<br>\begin{cases}<br>\displaystyle{\sum^\infty_{i=1}(x_i-\mu)^2p(x_i)} &amp; \text{if $X$ is discrete,} \[2ex]<br>\displaystyle{\int^\infty_{-\infty}(x-\mu)^2f(x)} &amp; \text{if $X$ is continuous.} \[2ex]<br>\end{cases}<br>$$</p>
+<p>Where $\mu = E(X)$.</p>
+<hr>
+<p>The <strong>standard deviation</strong> of a random variable $X$ is given by,</p>
+<p>$$<br>\sigma = SD(X) = \sqrt{Var(X)}.<br>$$</p>
+<hr>
+<p>$$<br>Var(X)=E(X^2)-[E(X)]^2.  \[2ex]<br>Var(X)=\int^\infty_{-\infty}x^2f(x)dx-\left(\int^\infty_{-\infty} xf(x)dx \right)^2<br>$$</p>
+<hr>
+<p>The variance $Var(x)$ has the following properties,</p>
+<ol>
+<li>$Var(c)=0.$</li>
+<li>$Var(aX+b) = a^2Var(X)$.</li>
+</ol>
+<h3 id="2-3-4-The-Application-of-Expectation-and-Variation"><a href="#2-3-4-The-Application-of-Expectation-and-Variation" class="headerlink" title="2.3.4 The Application of Expectation and Variation"></a>2.3.4 The Application of Expectation and Variation</h3><p><strong>Markov’s inequality</strong> : If $X$ is a random variable that takes only nonnegative values, then for any value $\varepsilon &gt; 0$,</p>
+<p>$$<br>P(X \leqslant \varepsilon) \geqslant \frac{E(X)} {\varepsilon}.<br>$$</p>
+<p><strong>Chebyshev’s inequality</strong> : If $X$ is a random variable with mean $\mu$ abd variance $\sigma^2$, then, for any value $\varepsilon &gt; 0$,</p>
+<p>$$<br>P(|X-\mu| \geqslant \varepsilon) \leqslant \frac{\sigma^2} {\varepsilon^2}.<br>$$</p>
+<h2 id="2-4-Discrete-Random-Variables"><a href="#2-4-Discrete-Random-Variables" class="headerlink" title="2.4 Discrete Random Variables"></a>2.4 Discrete Random Variables</h2><h3 id="2-4-1-Binomial-Distribution-with-Parameters-n-and-p"><a href="#2-4-1-Binomial-Distribution-with-Parameters-n-and-p" class="headerlink" title="2.4.1 Binomial Distribution with Parameters $n$ and $p$"></a>2.4.1 Binomial Distribution with Parameters $n$ and $p$</h3><p>$$<br>P(X=1)=p, P(X=0)=1-p, 0&lt;p&lt;1.<br>$$</p>
+<p>We call $X$ a <strong>Bernoulli random variable</strong>. We can say $X$ has <strong>Bernoulli distribution with parameter</strong> $p$. The p.f. of $X$ is written as follows,</p>
+<p>$$<br>p(x) =<br>\begin{cases}<br>1-p &amp; \text{if $x=0$}, \[2ex]<br>p   &amp; \text{if $x=1$}.<br>\end{cases}<br>$$</p>
+<p>The mean and variance of $X$ are</p>
+<p>$$<br>E(X)=p, \qquad Var(X)=p(1-p).<br>$$</p>
+<hr>
+<p>The random variable $X$ that counts the number of successes, $k$ , in the $n$ Bernoulli trials is said to have a <strong>binomial distribution with parameters $n$ and</strong> $p$, written as $X \sim B(n,p)$.</p>
+<p>$$<br>p(x) = \begin{pmatrix} n \ k \end{pmatrix} p^xq^{(n-x)} \qquad \text{for $x=0,1,\dotsb,n,$}<br>$$</p>
+<p>where $q=1-p$.</p>
+<hr>
+<p>Suppose that $X$ is a random variable which has binomial distribution with paramaeters $n$ and $p$. Then we have</p>
+<p>$$<br>E(X)=np \quad and \quad Var(X)=np(1-p).<br>$$</p>
+<hr>
+<p><strong>Poisson limit theorem</strong> : Suppose that $\lambda$ is a constant and $n$ is a positive integer. If that $lim_{n\to \infty}np_n=\lambda$, then we have,</p>
+<p>$$<br>\displaystyle{<br>\lim_{n\to+\infty}<br>\begin{pmatrix} n \ x \end{pmatrix}<br>p^x_n(1-p_n)^n-x=e^{-\lambda}<br>\frac{\lambda^x} {x!}<br>}<br>$$</p>
+<p>for any fixed nonnegative integer $x$.</p>
+<h3 id="2-4-2-Geometric-Distribution"><a href="#2-4-2-Geometric-Distribution" class="headerlink" title="2.4.2 Geometric Distribution"></a>2.4.2 Geometric Distribution</h3><p>Let $X$ be the random variable that counts the number of Bernoulli trials needed to obtain a first success. We say that $X$ has a <strong>geometric distribution with parameter</strong> $p$, where $p$ is the probability of success on any trial. We write that $X \sim G(p)$ (or $Geom(p)$). The p.f. of $X$ is,</p>
+<p>$$<br>p(x)=q^{x-1}p<br>$$</p>
+<p>for $x=1,2,\dotsb,$ where $q = 1-p$.</p>
+<hr>
+<p>Suppose that $X$ is a random variable which has a geometric distribution with parameters $p$. Then we have,</p>
+<p>$$<br>E(X)=\frac1p \quad and \quad Var(X)=\frac{1-p} {p^2}.<br>$$</p>
+<h3 id="2-4-3-Poisson-Distribution-with-Parameters-lambda"><a href="#2-4-3-Poisson-Distribution-with-Parameters-lambda" class="headerlink" title="2.4.3 Poisson Distribution with Parameters $\lambda$"></a>2.4.3 Poisson Distribution with Parameters $\lambda$</h3><p>We say that the discrete random variable $X$ whose probability function is given by equation $p(x)=\displaystyle\frac{e^{-\lambda}\lambda^x} {x!}  \ for \ x=0,1,\dotsb$ has a <strong>Poisson distribution with parameter</strong> $\lambda&gt;0$. We write that $X \sim Poi(\lambda)$.</p>
+<hr>
+<p>Suppose that $X$ is a random variable which has Poisson distribution with parameter $\lambda$. Then we have,</p>
+<p>$$<br>E(X)=Var(X)=\lambda.<br>$$</p>
+<h2 id="2-5-Contiuous-Random-Variables"><a href="#2-5-Contiuous-Random-Variables" class="headerlink" title="2.5 Contiuous Random Variables"></a>2.5 Contiuous Random Variables</h2><h3 id="2-5-1-Uniform-Distribution"><a href="#2-5-1-Uniform-Distribution" class="headerlink" title="2.5.1 Uniform Distribution"></a>2.5.1 Uniform Distribution</h3><p>The distribution of the random $X$ is called the <strong>uniform distribution</strong> of the interval $[a,b]$ if the p.d.f. of $X$ is,</p>
+<p>$$<br>f(x)=<br>\begin{cases}<br>\displaystyle{\frac1{b-a} } &amp; \text{for } a\leqslant x \leqslant b, \[2ex]<br>0 &amp; otherwise.<br>\end{cases}<br>$$</p>
+<p>We write that by $X \sim U(a,b)$.</p>
+<hr>
+<p>The corresponding d.f. of $X$ is,</p>
+<p>$$<br>F(x)=<br>\begin{cases}<br>0 &amp; \text{for }x&lt;a, \[2ex]<br>\displaystyle\frac{x-a} {b-a} &amp; \text{for } a\leqslant x\leqslant b, \[2ex]<br>1 &amp; \text{for } x \geqslant b.<br>\end{cases}<br>$$</p>
+<hr>
+<p>Suppose that $X$ is a random variable which has uniform distribution of the interval $[a,b]$. Then we have,</p>
+<p>$$<br>E(X)=\frac{a+b} {2} \quad and \quad Var(X)=\frac{(b-a)^2} {12}.<br>$$</p>
+<h3 id="2-5-2-Exponential-Distribution"><a href="#2-5-2-Exponential-Distribution" class="headerlink" title="2.5.2 Exponential Distribution"></a>2.5.2 Exponential Distribution</h3><p>Let $X$ be a continuous random variable whose density function is of the form,</p>
+<p>$$<br>f(x) =<br>\begin{cases}<br>\lambda e ^{-\lambda x} &amp; for \ x&gt;0, \[2ex]<br>0 &amp; for \ x \leqslant 0,<br>\end{cases}<br>$$</p>
+<p>where $\lambda &gt; 0$ is the scale parameter. We say that $X$ follows an <strong>exponential distribution</strong> with parameter $\lambda$. We write that $X \sim Exp(\lambda)$. The case where $\lambda=1$ is called the standard exponential distribution.</p>
+<hr>
+<p>The corresponding d.f. of $X$ is,</p>
+<p>$$<br>F(x)=<br>\begin{cases}<br>1-e ^{-\lambda x} &amp; for \ x\geqslant0, \[2ex]<br>0 &amp; for \ x &lt; 0.<br>\end{cases}<br>$$</p>
+<hr>
+<p>Suppose that $X$ is a random variable which has exponential distribution with parameter $\lambda$. Then we have,</p>
+<p>$$<br>E(X)=\frac1\lambda \quad and \quad Var(X)=\frac1{\lambda^2}<br>$$</p>
+<h3 id="2-5-3-Normal-Distribution"><a href="#2-5-3-Normal-Distribution" class="headerlink" title="2.5.3 Normal Distribution"></a>2.5.3 Normal Distribution</h3><p>Let $X$ be a continuous random variable that can take any real value. if its density function is given by,</p>
+<p>$$<br>\displaystyle f(x)=\frac1{\sqrt{2\pi}\sigma}e^\frac{-(x-\mu)^2} {2\sigma^2} \ for \ -\infty&lt;x&lt;\infty,<br>$$</p>
+<p>then we say that $X$ has a normal (or Gaussian) distribution with parameters $\mu$ and $\sigma^2$, where $\mu \in R$ and $\sigma &gt; 0$. We write that $X \sim N(\mu,\sigma^2)$.</p>
+<hr>
+<p>The corresponding d.f. of $X$ is,</p>
+<p>$$<br>F(x)=\frac 1{\sqrt{2\pi}\sigma} \int^x_{-\infty}e^\frac{-(t-\mu)^2} {2\sigma^2}  dt.<br>$$</p>
+<hr>
+<p>Suppose that $X \sim N(\mu,\sigma^2)$. Then we have,</p>
+<p>$$<br>E(X)= \mu \quad and \quad Var(X)=\sigma^2.<br>$$</p>
+<hr>
+<p>The normal distribution with parameter values $\mu=0$ and $\sigma = 1$ is called the <strong>standard normall distribution</strong> and it will be denoted by $Z$. The p.d.f. of $Z$ is,</p>
+<p>$$<br>\phi(z)=\frac1{\sqrt{2\pi} }e^\frac{-z^2} {2} \ for \ -\infty&lt;z&lt;\infty,<br>$$</p>
+<p>The corresponding d.f. of $Z$ is,</p>
+<p>$$<br>\Phi(z):=P(Z \leqslant z)= \int^z_{-\infty}\phi(z)dy.<br>$$</p>
+<hr>
+<p>Proposition of the standard normall distribution,</p>
+<ol>
+<li>$\Phi(x)+\Phi(-x)=1$.</li>
+<li>$\displaystyle \Phi(0)=\frac12.$</li>
+<li>If $X \sim N(\mu,\sigma^2)$, then the d.f. $F(x)$ of $X$ is given by $\displaystyle \Phi(\frac{x-\mu} {\sigma})$, i.e.,</li>
+</ol>
+<p>$$<br>F(x)=\displaystyle \Phi(\frac{x-\mu} {\sigma}).<br>$$</p>
+<h2 id="2-6-Review"><a href="#2-6-Review" class="headerlink" title="2.6 Review"></a>2.6 Review</h2><table>
+<thead>
+<tr>
+<th align="center">Distribution</th>
+<th align="center">p.f. or p.d.f.</th>
+<th align="center">Parameters</th>
+<th align="center">Mean</th>
+<th align="center">Variance</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Bernoulli</td>
+<td align="center">$p(x)=p^x(1-p)^{1-x}, x=0,1$</td>
+<td align="center">$p$</td>
+<td align="center">$p$</td>
+<td align="center">$pq$</td>
+</tr>
+<tr>
+<td align="center">Binomial</td>
+<td align="center">$ p(x) = \begin{pmatrix} n \ k \end{pmatrix} p^x(1-p)^{n-x} \ x=0,1,\dotsb,n$</td>
+<td align="center">$n $ and $p$</td>
+<td align="center">$np$</td>
+<td align="center">$np(1-p)$</td>
+</tr>
+<tr>
+<td align="center">Geometric</td>
+<td align="center">$ p(x)=(1-p)^{x-1} · p, \ x=1,2,\dotsb$</td>
+<td align="center">$p$</td>
+<td align="center">$\displaystyle \frac1p$</td>
+<td align="center">$\displaystyle \frac{1-p} {p^2} $</td>
+</tr>
+<tr>
+<td align="center">Poisson</td>
+<td align="center">$p(x)=\displaystyle\frac{e^{-\lambda}\lambda^x} {x!}  \ for \ x=0,1,\dotsb$</td>
+<td align="center">$\lambda$</td>
+<td align="center">$\lambda$</td>
+<td align="center">$\lambda$</td>
+</tr>
+<tr>
+<td align="center">Uniform</td>
+<td align="center">$ f(x)=\displaystyle{\frac1{b-a} } \ , a\leqslant x \leqslant b$</td>
+<td align="center">$[a,b]$</td>
+<td align="center">$\displaystyle \frac{a+b}2$</td>
+<td align="center">$\displaystyle \frac{(b-a)^2} {12} $</td>
+</tr>
+<tr>
+<td align="center">Exponential</td>
+<td align="center">$f(x)= \lambda e ^{-\lambda x} \ ,\ x\geqslant0$</td>
+<td align="center">$\lambda$</td>
+<td align="center">$\displaystyle\frac1{\lambda} $</td>
+<td align="center">$\displaystyle\frac1{\lambda^2} $</td>
+</tr>
+<tr>
+<td align="center">Normal</td>
+<td align="center">$ \displaystyle f(x)=\frac1{\sqrt{2\pi}\sigma}e^\frac{-(x-\mu)^2} {2\sigma^2} \ , \ -\infty&lt;x&lt;\infty$</td>
+<td align="center">$\mu$ and $\sigma^2$</td>
+<td align="center">$\mu$</td>
+<td align="center">$\sigma$</td>
+</tr>
+</tbody></table>
+<h1 id="Chapter-3-Random-Vectors"><a href="#Chapter-3-Random-Vectors" class="headerlink" title="Chapter 3 Random Vectors"></a>Chapter 3 Random Vectors</h1><h2 id="3-1-Random-Vectors-and-Joint-Distributions"><a href="#3-1-Random-Vectors-and-Joint-Distributions" class="headerlink" title="3.1 Random Vectors and Joint Distributions"></a>3.1 Random Vectors and Joint Distributions</h2><h3 id="3-1-1-Random-Vectors-and-Joint-Distributions"><a href="#3-1-1-Random-Vectors-and-Joint-Distributions" class="headerlink" title="3.1.1 Random Vectors and Joint Distributions"></a>3.1.1 Random Vectors and Joint Distributions</h3><p>The <strong>joint distribution function (joint d.f.)</strong> of $X$ and $Y$ is defined by,</p>
+<p>$$<br>F(x,y)=P(X \leqslant x, Y \leqslant y), -\infty &lt;x, y&lt;\infty.<br>$$</p>
+<hr>
+<p>The joint distribution function $F(x,y)$ is such that,</p>
+<ol>
+<li>For any $x_1&lt;x_2$, $F(x_1,y)&lt;F(x_2,y)$; for any $y_1&lt;y_2$, $F(x,y_1)&lt;F(x,y_2)$.</li>
+<li>$F(-\infty,y)=0$, $F(x,-\infty)=0$, $F(\infty,\infty)=1$.</li>
+<li>$\displaystyle \lim_{x \to x_0} F(x,y)=F(x_0,y)$, $\displaystyle \lim_{y \to y_0} F(x,y)=F(x,y_0)$.</li>
+</ol>
+<h3 id="3-1-2-Discrete-Random-Vectors"><a href="#3-1-2-Discrete-Random-Vectors" class="headerlink" title="3.1.2 Discrete Random Vectors"></a>3.1.2 Discrete Random Vectors</h3><p>For discrete bivariate random vectors, we always use the <strong>joint probability function</strong> (joint p.f.),</p>
+<p>$$<br>p(x,y):= P({X = x} \ \cap \ { Y = y} ) \equiv P(X=x, Y=y)<br>$$</p>
+<p>of the discrete random vector $(X,Y)$, whose possible values form a set of points $(x_j,y_k)$ in the plane, where $p(x,y)$ has the following properties,</p>
+<ol>
+<li>$p(x_j,y_k) \geqslant 0, \forall (x_j,y_k) \in R \times R$.</li>
+<li>$\displaystyle \sum^\infty_{j=1}\sum^\infty_{k=1}p(x_j,y_k)=1$.</li>
+</ol>
+<hr>
+<p>We can describe <strong>joint probability table</strong> by suing a tabular.</p>
+<table>
+<thead>
+<tr>
+<th align="center">$Y    \setminus    X$</th>
+<th align="center">$x_1$</th>
+<th align="center">$x_2$</th>
+<th align="center">$\dotsb$</th>
+<th align="center">$p_Y(y)$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$y_1$</td>
+<td align="center">$p(x_1,y_1)$</td>
+<td align="center">$p(x_2,y_1)$</td>
+<td align="center">$\dotsb$</td>
+<td align="center">$p_Y(y_1)$</td>
+</tr>
+<tr>
+<td align="center">$y_2$</td>
+<td align="center">$p(x_1,y_2)$</td>
+<td align="center">$p(x_2,y_2)$</td>
+<td align="center">$\dotsb$</td>
+<td align="center">$p_Y(y_2)$</td>
+</tr>
+<tr>
+<td align="center">$\dotsb$</td>
+<td align="center">$\dotsb$</td>
+<td align="center">$\dotsb$</td>
+<td align="center">$\dotsb$</td>
+<td align="center">$\dotsb$</td>
+</tr>
+<tr>
+<td align="center">$p_X(x)$</td>
+<td align="center">$p_X(x_1)$</td>
+<td align="center">$p_X(x_2)$</td>
+<td align="center">$\dotsb$</td>
+<td align="center">1</td>
+</tr>
+</tbody></table>
+<h3 id="3-1-3-Continuous-Random-Vectors"><a href="#3-1-3-Continuous-Random-Vectors" class="headerlink" title="3.1.3 Continuous Random Vectors"></a>3.1.3 Continuous Random Vectors</h3><p>Let $X$ and $Y$ be two continuous random variables. The random variables $X$ and $Y$ are called <strong>(jointly) continuous</strong> if the joint distribution function $F(x,y)$ can be expressed by the <strong>joint probablity density function</strong> (joint p.d.f.) $f(x,y)$ as,</p>
+<p>$$<br>F(x,y)=\int_{-\infty}^y\int_{-\infty}^xf(u,v)dudv.<br>$$</p>
+<p>The joint p.d.f. $f(x,y)$ has the following properties,</p>
+<ol>
+<li>$f(x,y)\geqslant0$ for any point $(x,y)\in R \times R$.</li>
+<li>$\displaystyle \int_{-\infty}^\infty\int_{-\infty}^\infty f(x,y)dxdy=1$.</li>
+</ol>
+<hr>
+<p>The <strong>marginal probability density functions</strong> of $X$ and $Y$ are defined by,</p>
+<p>$$<br>f_X(x)= \int_{-\infty}^\infty f(x,y)dy \quad and \quad f_Y(y)= \int_{-\infty}^\infty f(x,y)dx.<br>$$</p>
+<hr>
+<p>$$<br>P((X&lt;,Y)\in A)=\frac{L(A)} {ab}.<br>$$</p>
+<p>We call $(X,Y)$ has uniform distribution on the domain $D$, denoted by $(X,Y) \sim U(D)$.</p>
+<h2 id="3-2-Independence-of-Random-Variable"><a href="#3-2-Independence-of-Random-Variable" class="headerlink" title="3.2 Independence of Random Variable"></a>3.2 Independence of Random Variable</h2><p>Two <strong>random variable $X$ and $Y$ are said to be independent</strong> if for every pair of $x$ and $y$,</p>
+<p>$$<br>F(x,y)=F_X(x)F_Y(y).<br>$$</p>
+<p>We denoted it by $X \bot Y$.</p>
+<hr>
+<p>Two <strong>random variable $X$ and $Y$ are said to be independent</strong> if for every pair of $x$ and $y$,</p>
+<p>$$<br>\begin{cases}<br>p(x,y)=p_X(x) · p_Y(y) \quad \text{when X and Y are discrete,} \[2ex]<br>f(x,y)=f_X(x) · f_Y(y) \quad \text{when X and Y are continuous.}<br>\end{cases}<br>$$</p>
+<p>If the equations above are not satisfied for all $(x,y)$, then $X$ and $Y$ are said to be dependent.</p>
+<hr>
+<p>Let $a$, $b$, $c$ and $d$ be given values such that $-\infty \leqslant a &lt; b \leqslant +\infty $ and $-\infty \leqslant c &lt; d \leqslant +\infty $, and let $S$ be a rectangle in the xy-plane,</p>
+<p>$$<br>S={(x,y)|a\leqslant x \leqslant b \ and \ c\leqslant y \leqslant d}.<br>$$</p>
+<p>Suppose that $f(x,y)=0$ for every point $(x,y)$ outside $S$. Then the continuous (discrete) random variable $X$ and $Y$ are indepent if and only if their joint p.d.f. (or p.f.) can be expressed as,</p>
+<p>$$<br>f(x,y) = h(x)g(y).<br>$$</p>
+<p>for all points in $S$.</p>
+<hr>
+<p>Let $X$ and $Y$ be two independent random variables. Then for any two real functions $g(·)$ and $h(·)$， $g(X)$ and $h(Y)$ are independent.</p>
+<h2 id="3-3-Conditional-Distribution"><a href="#3-3-Conditional-Distribution" class="headerlink" title="3.3 Conditional Distribution"></a>3.3 Conditional Distribution</h2><h3 id="Discrete-Case-2"><a href="#Discrete-Case-2" class="headerlink" title="Discrete Case"></a><u>Discrete Case</u></h3><p>If $X$ and $Y$ are discrete random variables, then it is natural to define the <strong>conditional probability function of $X$ given that $Y=y$</strong>, by,</p>
+<p>$$<br>p_{X|Y}(x|y) = P(X=x|Y=y)= \frac{P(X=x,Y=y)} {P(Y=y)}=\frac{p(x,y)} {p_Y(y)}<br>$$</p>
+<p>for all values of $y$ such that $p_Y(y)&gt;0$.</p>
+<p>If $X$ and $Y$ are discrete random variables, then it is natural to define the <strong>conditional probability function of $Y$ given that $x=x$</strong>, by,</p>
+<p>$$<br>p_{Y|X}(y|x) = P(Y=y|X=x)= \frac{P(X=x,Y=y)} {P(X=x)}=\frac{p(x,y)} {p_X(x)}<br>$$</p>
+<p>for all values of $x$ such that $p_X(x)&gt;0$.</p>
+<h3 id="Continuous-Case-2"><a href="#Continuous-Case-2" class="headerlink" title="Continuous Case"></a><u>Continuous Case</u></h3><p>If $X$ and $Y$ have joint p.d.f. $f(x,y)$, then the <strong>conditional probability density function of $X$ given</strong> $Y=y$ is given by,</p>
+<p>$$<br>f_{X|Y}(x|y)=<br>\begin{cases}<br>\displaystyle \frac{f(x,y)} {f_Y(y)} &amp; if \ 0&lt;f_Y(y)&lt; +\infty, \[2ex]<br>\displaystyle 0 &amp; elsewhere.<br>\end{cases}<br>$$</p>
+<p>If $X$ and $Y$ have joint p.d.f. $f(x,y)$, then the <strong>conditional probability density function of $Y$ given</strong> $X=x$ is given by,</p>
+<p>$$<br>f_{Y|X}(y|x)=<br>\begin{cases}<br>\displaystyle \frac{f(x,y)} {f_X(x)} &amp; if \ 0&lt;f_X(x)&lt; +\infty, \[2ex]<br>\displaystyle 0 &amp; elsewhere.<br>\end{cases}<br>$$</p>
+<h2 id="3-4-One-Function-of-Two-Random-Variables"><a href="#3-4-One-Function-of-Two-Random-Variables" class="headerlink" title="3.4 One Function of Two Random Variables"></a>3.4 One Function of Two Random Variables</h2><h3 id="Discrete-Case-3"><a href="#Discrete-Case-3" class="headerlink" title="Discrete Case"></a><u>Discrete Case</u></h3><p>Make sure what values $Z$ can take according to all possible values of $(X,Y)$.</p>
+<hr>
+<p>If $X$ and $Y$ are independent discrete random variables, then $X+Y$ has probability function,</p>
+<p>$$<br>p_{X+Y}(n)=\sum_np_X(x)p_Y(n-x).<br>$$</p>
+<p>The function $p_{X+Y} $ is called the convolution of $p_X$ and $p_Y$, and is written as,</p>
+<p>$$<br>p_{X+Y} = p_X*p_Y<br>$$</p>
+<h3 id="Continuous-Case-3"><a href="#Continuous-Case-3" class="headerlink" title="Continuous Case"></a><u>Continuous Case</u></h3><ol>
+<li><p><strong>The case of</strong> $X+Y$</p>
+<p>If $X$ and $Y$ are independent, then,</p>
+<p>$$<br>f_{X+Y}(z) = \int^{\infty}_{-\infty}f_X(x)f_Y(z-x)dx, \quad -\infty&lt;z&lt;\infty<br>$$</p>
+<p>The equation above can be written as,</p>
+<p>$$<br>f_{X+Y}=f_X · f_Y<br>$$</p>
+<p>If $X$ and $Y$ are nonnegative independent random variables, then,</p>
+<p>$$<br>f_{X+Y}(z)=<br>\begin{cases}<br>\displaystyle \int^z_0 f_X(x)f_Y(z-x)dx &amp; 0&lt;z&lt;\infty, \[2ex]<br>0 &amp; elsewhere.<br>\end{cases}<br>$$</p>
+<hr>
+<p>If $X \sim N(\mu_1, \sigma_1^2)$, $Y \sim N(\mu_2, \sigma_2^2)$ and $X \bot Y$, then,</p>
+<p>$$<br>aX + bY + c \sim N(a\mu_1 + b\mu_2 + c, a^2\sigma_1^2 + b^2\sigma_2^2),<br>$$</p>
+<p>where $a$, $b$ are constants.</p>
+</li>
+<li><p><strong>The case of</strong> $max(X,Y)$</p>
+<p>For $Z=max(X,Y)$ and $X \bot Y$, we have,</p>
+<p>$$<br>F_Z(z)=[F(z)]^2. \[2ex]<br>f_Z(z)=2F(z)f(z)<br>$$</p>
+</li>
+<li><p><strong>The case of</strong> $min(X,Y)$</p>
+<p>For $W=min(X,Y)$ and $X \bot Y$, we have,</p>
+<p>$$<br>F_W=1-[1-F(w)]^2. \[2ex]<br>f_W(w)=F_W^\prime (w)=2[1-F(w)]f(w).<br>$$</p>
+</li>
+</ol>
+<h2 id="3-5-Transformation-of-Two-Random-Variables"><a href="#3-5-Transformation-of-Two-Random-Variables" class="headerlink" title="3.5 Transformation of Two Random Variables"></a>3.5 Transformation of Two Random Variables</h2><p>I have no idea.</p>
+<h2 id="3-6-Numerical-Characteristics-of-Random-Variables"><a href="#3-6-Numerical-Characteristics-of-Random-Variables" class="headerlink" title="3.6 Numerical Characteristics of Random Variables"></a>3.6 Numerical Characteristics of Random Variables</h2><h3 id="3-6-1-Expectation-of-Sums-and-Products"><a href="#3-6-1-Expectation-of-Sums-and-Products" class="headerlink" title="3.6.1 Expectation of Sums and Products"></a>3.6.1 Expectation of Sums and Products</h3><p>Let $X$ and $Y$ be jointly distributed random variables with p.f. $p(x,y)$ or p.d.f. $f(x,y)$ according to whether the variables are discrete or continuous. Then the expected value of a function $h(X,Y)$, denoted by $E[h(X,Y)]$, is given by,</p>
+<p>$$<br>E[h(X,Y)]=<br>\begin{cases}<br>\displaystyle \sum_x\sum_y h(x,y) · p(x,y) &amp; \text{if $X$ and $Y$ are discrete,} \[2ex]<br>\displaystyle \int^\infty_{-\infty} \int^\infty_{-\infty} h(x,y) · f(x,y) dxdy &amp; \text{if $X$ and $Y$ are continuous.}<br>\end{cases}<br>$$</p>
+<hr>
+<p>Suppose that $E(X)$ and $E(Y)$ are noth finite, we have,</p>
+<p>$$<br>E(X+Y)=E(X)+E(Y).<br>$$</p>
+<hr>
+<p>If $X$ and $Y$ are two independent random variables, then,</p>
+<p>$$<br>E(XY)=E(X)E(Y).<br>$$</p>
+<p>And for any functions $g$ and $h$,</p>
+<p>$$<br>E[g(X)h(Y)]=E[g(X)]E[h(Y)].<br>$$</p>
+<hr>
+<p><strong>The Cauchy-Schwarz inequality</strong> : Let $X$ and $Y$ be jointly distributed random variables having finite second moments. Then,</p>
+<p>$$<br>[E(XY)]^2 \leqslant E(X^2)E(Y^2).<br>$$</p>
+<hr>
+<p>Let $X$ and $Y$ be two independent random variables. Then,</p>
+<p>$$<br>Var(X+Y) = Var(X) + Var(Y). \[2ex]<br>Var(aX+bY+c)=a^2Var(X)+b^2Var(Y).<br>$$</p>
+<h3 id="3-6-2-Covariance-and-Correlation"><a href="#3-6-2-Covariance-and-Correlation" class="headerlink" title="3.6.2 Covariance and Correlation"></a>3.6.2 Covariance and Correlation</h3><p>The <strong>covariance</strong> between two random variables $X$ and $Y$ is,</p>
+<p>$$<br>Cov(X,Y)= E(XY)-E(X)E(Y).<br>$$</p>
+<hr>
+<p>For jointly distributed random variables $X$ and $Y$, and constants $a, \ b$, we have,</p>
+<ol>
+<li>$Cov(X,Y) = Cov(Y,X).$</li>
+<li>$Cov(X,X)=E(X^2)-[E(X)]^2-[E(X)]^2=Var(X)$.</li>
+<li>$Cov(aX,bY) = abCov(X,Y).$</li>
+<li>$Cov(X+Y,Z)=Cov(X,Z)+Cov(Y,Z).$</li>
+</ol>
+<hr>
+<p>The correlation coefficient of $X$ and $Y$, denoted by $\rho(X,Y)$, $\rho_XY$, or just $\rho$, is defined by,</p>
+<p>$$<br>\rho(X,Y)=\frac{Cov(X,Y)} {\sigma_X· \sigma_Y},<br>$$</p>
+<p>where $\sigma_X$ and $\sigma_Y$ are standard deviation of $X$ and $Y$ respectively.</p>
+<h2 id="3-7-Multivariate-Distributions"><a href="#3-7-Multivariate-Distributions" class="headerlink" title="3.7 Multivariate Distributions"></a>3.7 Multivariate Distributions</h2><h3 id="3-7-1-Distribution-Functions-of-Multiple-Random-Vectors"><a href="#3-7-1-Distribution-Functions-of-Multiple-Random-Vectors" class="headerlink" title="3.7.1 Distribution Functions of Multiple Random Vectors"></a>3.7.1 Distribution Functions of Multiple Random Vectors</h3><h3 id="3-7-2-Numerical-Characteristics-of-Random-Vectors"><a href="#3-7-2-Numerical-Characteristics-of-Random-Vectors" class="headerlink" title="3.7.2 Numerical Characteristics of Random Vectors"></a>3.7.2 Numerical Characteristics of Random Vectors</h3><h3 id="3-7-3-Multiple-Normal-Distribution"><a href="#3-7-3-Multiple-Normal-Distribution" class="headerlink" title="3.7.3 Multiple Normal Distribution"></a>3.7.3 Multiple Normal Distribution</h3><h1 id="Chapter-4-Sequences-of-Random-Variables"><a href="#Chapter-4-Sequences-of-Random-Variables" class="headerlink" title="Chapter 4 Sequences of Random Variables"></a>Chapter 4 Sequences of Random Variables</h1><h2 id="4-1-Family-of-Distribution-Functions-and-Numerical-Characteristics"><a href="#4-1-Family-of-Distribution-Functions-and-Numerical-Characteristics" class="headerlink" title="4.1 Family of Distribution Functions and Numerical Characteristics"></a>4.1 Family of Distribution Functions and Numerical Characteristics</h2><p>Let $\Omega$ be a sample space. We say that ${X_n(\omega),\omega\in \Omega}<em>{n=1}^\infty$ is a <strong>sequence of random variables</strong> defined on the sample space $\Omega$ if all the random variables $X_n$ belonging to the sequence ${X_n}</em>{n=1}^\infty$ are functions from $\Omega$ to $R$. We usually denote the sequence of random variable by ${X_n}_{n=1}^\infty$.</p>
+<hr>
+<p>Suppose that ${X_n}<em>{n=1}^\infty$ is a random sequence. The <strong>family of distribution functions</strong> of ${X_n}</em>{n=1}^\infty$ is defined by,</p>
+<p>$$<br>{F(x_1, x_2, \dotsb, x_k;n_1, n_2, \dotsb, n_k), \ \forall k, \ \forall n_1=1,2,\dotsb, \ i=1,2,\dotsb,k}.<br>$$</p>
+<p>We say that ${X_n}_{n=1}^\infty$ is a <strong>sequence of identically distributed random variables</strong> if any two elements of the sequence have the same distribution function:</p>
+<p>$$<br>\forall x \in R, \forall i,j\in \N, F_i(x)=F_j(x).<br>$$</p>
+<p>We say that ${X_n}<em>{n=1}^\infty$ is a <strong>sequence of independent and identically distributed random variables</strong> (or an <strong>IDD</strong> sequence of random variables), if ${X_n}</em>{x=1}^\infty$ is both a sequence of independent random variables and a sequence of identically distributed random variables.</p>
+<h2 id="4-2-Chebyshev’s-Inequality-and-the-Law-of-Large-Numbers"><a href="#4-2-Chebyshev’s-Inequality-and-the-Law-of-Large-Numbers" class="headerlink" title="4.2 Chebyshev’s Inequality and the Law of Large Numbers"></a>4.2 Chebyshev’s Inequality and the Law of Large Numbers</h2><p><strong>Markov’s inequality</strong> : If $X$ is a random variable that takes only nonnegative values, then for any value $a&gt;0$,</p>
+<p>$$<br>P{X\geqslant a} \leqslant \frac{E[X]} {a}.<br>$$</p>
+<hr>
+<p><strong>Chebyshev’s inequality</strong> : If $X$ is a random variable with finite mean $\mu$ and variance $\sigma^2$, then for any value $k&gt;0$,</p>
+<p>$$<br>P{|X-\mu|\geqslant k}\leqslant \frac{\sigma^2} {k^2}.<br>$$</p>
+<hr>
+<p>If $Var(X)=0$, then $P{X=E[X]}=1.$</p>
+<hr>
+<p><strong>The weak law of large numbers</strong> : Let $X_1,X_2,\dotsb$ be a sequence of independent and identically distributed random variables and $S_n=X_1+X_2+\dotsb+X_n$. Then, for any $\varepsilon &gt;0$,</p>
+<p>$$<br>\displaystyle{\lim_{n\to\infty} }P \left{ \left| \frac{S_n}n-E\left(\frac{S_n}n\right)\right| \geqslant \varepsilon\right} =0.<br>$$</p>
+<p>Use $\displaystyle \overline{X}_n = \frac{S_n}n$, for any $\varepsilon &gt;0$,</p>
+<p>$$<br>\displaystyle{\lim_{n\to\infty} }P { | \overline{X}_n-E(\overline{X}_n)| \geqslant \varepsilon} =0.<br>$$</p>
+<hr>
+<p><strong>The strong law of large numbers</strong> : for any $\varepsilon &gt;0$,</p>
+<p>$$<br>P ( \lim_{n\to\infty}|\overline X_n-E(\overline X_n)|=0)=1.<br>$$</p>
+<hr>
+<p><strong>Chebyshev’s law of large number</strong> :</p>
+<hr>
+<p><strong>Bernoulli’s law of large numbers</strong> : Suppose the $n_A$ is the number of success in $n$ Bernoulli trials with probability $p$ for success. The for any $\varepsilon &gt; 0$,</p>
+<p>$$<br>P \left( \left| \frac{n_A}n -p \right|&lt;\varepsilon \right) \to 1 \quad as \quad n\to \infty.<br>$$</p>
+<h2 id="4-3-The-Central-Limit-Theorem"><a href="#4-3-The-Central-Limit-Theorem" class="headerlink" title="4.3 The Central Limit Theorem"></a>4.3 The Central Limit Theorem</h2><p>We have,</p>
+<p>$$<br>E(S_n)=n\mu. \[2ex]<br>\sigma_{S_n} = \sqrt{n}\sigma.<br>$$</p>
+<hr>
+<p>The standardized sum of $S_n$ is given by,</p>
+<p>$$<br>S_n^*=\frac{S_n-n\mu} {\sigma\sqrt{n} }.<br>$$</p>
+<p>$S_n^*$ always has expected value $0$ and variance $1$.</p>
+<hr>
+<p><strong>De Movire-laplace central limit theorem</strong> : Suppose that $X \sim B(n,p)$. Then the distribution of</p>
+<p>$$<br>\displaystyle \frac{X-np} {\sqrt{np(1-p)} }<br>$$</p>
+<p>Tends to the standard normal as $n \to \infty$. That is,</p>
+<p>$$<br>\lim_{n\to \infty}P \left( \displaystyle \frac{X-np} {\sqrt{np(1-p)} } \leqslant x\right)=\frac1{\sqrt{2\pi} }\int_{-\infty}^{x}e^{-s^2/2}ds=\Phi(x).<br>$$</p>
+<h1 id="Chapter-5-Introduction-to-Stochastic-Processes"><a href="#Chapter-5-Introduction-to-Stochastic-Processes" class="headerlink" title="Chapter 5 Introduction to Stochastic Processes"></a>Chapter 5 Introduction to Stochastic Processes</h1><h2 id="5-1-Definition-and-Classification"><a href="#5-1-Definition-and-Classification" class="headerlink" title="5.1 Definition and Classification"></a>5.1 Definition and Classification</h2><p>A <strong>stochastic process</strong> is a family of time functions depending on the parameter $\omega$.</p>
+<p>A stochastic process $X(t)$ is a function of $t$ and $\omega$, ${X(t,\omega), t\in T} $.</p>
+<hr>
+<p><strong>State Space $S$</strong></p>
+<p>This is the space in which the possible values of each $X_t$ lie.</p>
+<p>In the case that $S={1,2,\dotsb},$ we refer to the process at hand as integer valued, or alternately as a discrete state process.</p>
+<p>If $S=(-\infty, \infty)$, then we call $X_t$ a real-valued stochastic process.</p>
+<hr>
+<p><strong>Classical Types of stochastic Process</strong></p>
+<ol>
+<li><strong>Stationary Processes</strong></li>
+<li><strong>Markov Processes</strong></li>
+<li><strong>Process with Stationary Independent Increments</strong></li>
+</ol>
+<h2 id="5-2-The-Distribution-Family-and-the-Moment-Functions"><a href="#5-2-The-Distribution-Family-and-the-Moment-Functions" class="headerlink" title="5.2 The Distribution Family and the Moment Functions"></a>5.2 The Distribution Family and the Moment Functions</h2><p>For a specific $t$, $X_t$ is a random variable with distribution,</p>
+<p>$$<br>F(x;t)=P{X_t \leqslant x}.<br>$$</p>
+<p>The distribution function of this random variable, in general depend on $t$. The function $F(x;t)$ is called the first-order distribution function of the process $X_t$. It’s derivative with respect to $x$,</p>
+<p>$$<br>f(x,t)=\frac{\partial {F(x,t)} } {\partial x}<br>$$</p>
+<p>is the first-order density of $X_t$.</p>
+<p>The second-order distribution of the process $X_t$ is the joint distribution</p>
+<p>$$<br>f(x_1,x_2;t_1,t_2)=P(X_{t_1} \leqslant x_1, X_{t_2}\leqslant x_2).<br>$$</p>
+<p>The corresponding density equals</p>
+<p>$$<br>\displaystyle f(x_1,x_2;t_1,t_2)=\frac{\partial^2F(x_1,x_2;t_1,t_2)} {\partial x_1 \partial x_2}.<br>$$</p>
+<hr>
+<p><strong>Two-dimensional process</strong> : ${(X_t,Y_t), t\in T} $.</p>
+<hr>
+<p><strong>The complex process</strong> : $Z_t=X_t+iY_t$.</p>
+<h2 id="5-3-The-Moments-of-the-Stochastic-Processes"><a href="#5-3-The-Moments-of-the-Stochastic-Processes" class="headerlink" title="5.3 The Moments of the Stochastic Processes"></a>5.3 The Moments of the Stochastic Processes</h2><h3 id="5-3-1-Mean-Autocorrelation-and-Autocovariance"><a href="#5-3-1-Mean-Autocorrelation-and-Autocovariance" class="headerlink" title="5.3.1 Mean, Autocorrelation and Autocovariance"></a>5.3.1 Mean, Autocorrelation and Autocovariance</h3><p>If $X_t$ is a real stochastic process, then its mean function is,</p>
+<p>$$<br>\mu_X(t)=E(X_t), t\in T.<br>$$</p>
+<p>The variance function is,</p>
+<p>$$<br>\sigma^2_X(t)=Var(X_t).<br>$$</p>
+<p>The autocorrelation function is,</p>
+<p>$$<br>R_X(t_1,t_2)=R_{XX}(t_1,t_2)=E(X_{t_1}X_{t_2}).<br>$$</p>
+<p>&lt;待续&gt;</p>
+<h3 id="5-3-2-Cross-correlation-and-Cross-covariance"><a href="#5-3-2-Cross-correlation-and-Cross-covariance" class="headerlink" title="5.3.2 Cross-correlation and Cross-covariance"></a>5.3.2 Cross-correlation and Cross-covariance</h3><p>If two stochastic processes are independent, then they are uncorrelated.</p>
+<h2 id="5-4-Stochastic-Analysis"><a href="#5-4-Stochastic-Analysis" class="headerlink" title="5.4 Stochastic Analysis"></a>5.4 Stochastic Analysis</h2><p><strong>Continuity in Mean</strong> : A stochastic process $X_t$ is <strong>continuous in mean square</strong> at $t_0$ if,</p>
+<p>$$<br>\displaystyle \lim_{\varepsilon\to 0} E\left[ (X_{t_0+\varepsilon }-X_{t_0})^2 \right]=0<br>$$</p>
+<hr>
+<p>If $X_t$ is a mean square continuous process, then its mean is also continuous (but not mean square continuous), i.e.</p>
+<p>$$<br>\displaystyle \lim_{\varepsilon \to 0}\mu_X(t+\varepsilon) = \mu_X(t).<br>$$</p>
+<hr>
+<p><strong>Hint</strong></p>
+<p>$\displaystyle cos(\alpha)cos(\beta)=\frac12 (cos(\alpha+\beta)+cos(\alpha-\beta))$</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"># math</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/03/27/romantic-losing/" rel="prev" title="课堂上的“浪漫主义之殇”">
+      <i class="fa fa-chevron-left"></i> 课堂上的“浪漫主义之殇”
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/07/28/leetcode-twosum/" rel="next" title="LeetCode - Two Sum">
+      LeetCode - Two Sum <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-1-Event-and-Their-Probabilities"><span class="nav-text">Chapter 1 Event and Their Probabilities</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-The-History-of-Probability"><span class="nav-text">1.1 The History of Probability</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Experiment-Sample-Space-and-Random-Event"><span class="nav-text">1.2 Experiment, Sample Space and Random Event</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-Basic-Definitions"><span class="nav-text">1.2.1 Basic Definitions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-Events-as-Sets"><span class="nav-text">1.2.2 Events as Sets</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Probabilities-Defined-on-Events"><span class="nav-text">1.3 Probabilities Defined on Events</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-1-Classical-Probabilities"><span class="nav-text">1.3.1 Classical Probabilities</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-2-Geometric-Probabilities"><span class="nav-text">1.3.2 Geometric Probabilities</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-3-The-Frequency-Interpretation-of-Probabilities"><span class="nav-text">1.3.3 The Frequency Interpretation of Probabilities</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-Probability-Space"><span class="nav-text">1.4 Probability Space</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-Axiomatic-Definition-of-Probability"><span class="nav-text">1.4.1 Axiomatic Definition of Probability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-Properties-of-Probability"><span class="nav-text">1.4.2 Properties of Probability</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-Conditional-Probabilities"><span class="nav-text">1.5 Conditional Probabilities</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-1-The-Definition-of-Conditional-Probability"><span class="nav-text">1.5.1 The Definition of Conditional Probability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-2-The-Multiplication-Rule"><span class="nav-text">1.5.2 The Multiplication Rule</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-3-Total-Probability-Formula"><span class="nav-text">1.5.3 Total Probability Formula</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-4-Bayes’-Theorem"><span class="nav-text">1.5.4 Bayes’ Theorem</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-Independence-of-Events"><span class="nav-text">1.6 Independence of Events</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-1-Independence-of-Events"><span class="nav-text">1.6.1 Independence of Events</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-2-Independence-of-Several-Events"><span class="nav-text">1.6.2 Independence of Several Events</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-3-Bernoulli-Trial"><span class="nav-text">1.6.3 Bernoulli Trial</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-2-Random-Variable"><span class="nav-text">Chapter 2 Random Variable</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-The-Definition-of-a-Random-Variable"><span class="nav-text">2.1 The Definition of a Random Variable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-The-Distribution-Function-of-a-Random-Variable"><span class="nav-text">2.2 The Distribution Function of a Random Variable</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-The-Definition-and-Properties-of-Distribution-Function"><span class="nav-text">2.2.1 The Definition and Properties of Distribution Function</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Discrete-Case"><span class="nav-text">Discrete Case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Continuous-Case"><span class="nav-text">Continuous Case</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-The-Distribution-Function-of-Function-of-a-Random-Variable"><span class="nav-text">2.2.2 The Distribution Function of Function of a Random Variable</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Discrete-Case-1"><span class="nav-text">Discrete Case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Continuous-Case-1"><span class="nav-text">Continuous Case</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Mathematical-Expectation-and-Variance"><span class="nav-text">2.3 Mathematical Expectation and Variance</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-Expectation-of-a-Random-Variable"><span class="nav-text">2.3.1 Expectation of a Random Variable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-Expectation-of-Function-of-a-Random-Variable"><span class="nav-text">2.3.2 Expectation of Function of a Random Variable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-3-Variance-of-a-Random-Variable"><span class="nav-text">2.3.3 Variance of a Random Variable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-4-The-Application-of-Expectation-and-Variation"><span class="nav-text">2.3.4 The Application of Expectation and Variation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-Discrete-Random-Variables"><span class="nav-text">2.4 Discrete Random Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-1-Binomial-Distribution-with-Parameters-n-and-p"><span class="nav-text">2.4.1 Binomial Distribution with Parameters $n$ and $p$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-2-Geometric-Distribution"><span class="nav-text">2.4.2 Geometric Distribution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-3-Poisson-Distribution-with-Parameters-lambda"><span class="nav-text">2.4.3 Poisson Distribution with Parameters $\lambda$</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-Contiuous-Random-Variables"><span class="nav-text">2.5 Contiuous Random Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-1-Uniform-Distribution"><span class="nav-text">2.5.1 Uniform Distribution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-2-Exponential-Distribution"><span class="nav-text">2.5.2 Exponential Distribution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-3-Normal-Distribution"><span class="nav-text">2.5.3 Normal Distribution</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-Review"><span class="nav-text">2.6 Review</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-3-Random-Vectors"><span class="nav-text">Chapter 3 Random Vectors</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Random-Vectors-and-Joint-Distributions"><span class="nav-text">3.1 Random Vectors and Joint Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-1-Random-Vectors-and-Joint-Distributions"><span class="nav-text">3.1.1 Random Vectors and Joint Distributions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-2-Discrete-Random-Vectors"><span class="nav-text">3.1.2 Discrete Random Vectors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-3-Continuous-Random-Vectors"><span class="nav-text">3.1.3 Continuous Random Vectors</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Independence-of-Random-Variable"><span class="nav-text">3.2 Independence of Random Variable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-Conditional-Distribution"><span class="nav-text">3.3 Conditional Distribution</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Discrete-Case-2"><span class="nav-text">Discrete Case</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Continuous-Case-2"><span class="nav-text">Continuous Case</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-One-Function-of-Two-Random-Variables"><span class="nav-text">3.4 One Function of Two Random Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Discrete-Case-3"><span class="nav-text">Discrete Case</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Continuous-Case-3"><span class="nav-text">Continuous Case</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-Transformation-of-Two-Random-Variables"><span class="nav-text">3.5 Transformation of Two Random Variables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-6-Numerical-Characteristics-of-Random-Variables"><span class="nav-text">3.6 Numerical Characteristics of Random Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-1-Expectation-of-Sums-and-Products"><span class="nav-text">3.6.1 Expectation of Sums and Products</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-2-Covariance-and-Correlation"><span class="nav-text">3.6.2 Covariance and Correlation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-7-Multivariate-Distributions"><span class="nav-text">3.7 Multivariate Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-1-Distribution-Functions-of-Multiple-Random-Vectors"><span class="nav-text">3.7.1 Distribution Functions of Multiple Random Vectors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-2-Numerical-Characteristics-of-Random-Vectors"><span class="nav-text">3.7.2 Numerical Characteristics of Random Vectors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-3-Multiple-Normal-Distribution"><span class="nav-text">3.7.3 Multiple Normal Distribution</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-4-Sequences-of-Random-Variables"><span class="nav-text">Chapter 4 Sequences of Random Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Family-of-Distribution-Functions-and-Numerical-Characteristics"><span class="nav-text">4.1 Family of Distribution Functions and Numerical Characteristics</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Chebyshev’s-Inequality-and-the-Law-of-Large-Numbers"><span class="nav-text">4.2 Chebyshev’s Inequality and the Law of Large Numbers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-The-Central-Limit-Theorem"><span class="nav-text">4.3 The Central Limit Theorem</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-5-Introduction-to-Stochastic-Processes"><span class="nav-text">Chapter 5 Introduction to Stochastic Processes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-Definition-and-Classification"><span class="nav-text">5.1 Definition and Classification</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-The-Distribution-Family-and-the-Moment-Functions"><span class="nav-text">5.2 The Distribution Family and the Moment Functions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-The-Moments-of-the-Stochastic-Processes"><span class="nav-text">5.3 The Moments of the Stochastic Processes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-1-Mean-Autocorrelation-and-Autocovariance"><span class="nav-text">5.3.1 Mean, Autocorrelation and Autocovariance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-2-Cross-correlation-and-Cross-covariance"><span class="nav-text">5.3.2 Cross-correlation and Cross-covariance</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-Stochastic-Analysis"><span class="nav-text">5.4 Stochastic Analysis</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yifei"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Yifei</p>
+  <div class="site-description" itemprop="description">Just open a new door.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:Yif.Xin@gmail.com" title="Email → mailto:Yif.Xin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/zolars" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zolars" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yifei</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://zolars.github.io/2017/06/03/probability-theory-notes/',]
+      });
+      });
+  </script>
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://zolars.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://zolars.github.io/2017/06/03/probability-theory-notes/";
+    this.page.identifier = "2017/06/03/probability-theory-notes/";
+    this.page.title = "Probability Theory Notes";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://zolars.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
