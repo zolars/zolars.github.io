@@ -1,3 +1,4 @@
+/* changed */
 :root {
   --body-bg-color: #eee;
   --content-bg-color: #fff;
@@ -171,7 +172,7 @@ body {
   background: var(--body-bg-color);
   color: var(--text-color);
   font-family: 'Noto Sans SC', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 0.8em;
+  font-size: 0.85em;
   line-height: 2;
 }
 @media (max-width: 991px) {
@@ -953,7 +954,7 @@ pre .javascript .function {
 }
 .main-inner {
   margin: 0 auto;
-  width: calc(100% - 20px);
+  width: calc(100% - 30px);
 }
 @media (min-width: 1200px) {
   .main-inner {
@@ -970,7 +971,7 @@ pre .javascript .function {
 }
 .header-inner {
   margin: 0 auto;
-  width: calc(100% - 20px);
+  width: calc(100% - 30px);
 }
 @media (min-width: 1200px) {
   .header-inner {
@@ -1188,7 +1189,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c9ed38;
+  background: #4d28c3;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1394,7 +1395,7 @@ pre .javascript .function {
   box-sizing: border-box;
   margin: 0 auto;
   text-align: center;
-  width: calc(100% - 20px);
+  width: calc(100% - 30px);
 }
 @media (min-width: 1200px) {
   .footer-inner {
@@ -2137,7 +2138,7 @@ mjx-container + br {
 .header {
   margin: 0 auto;
   position: relative;
-  width: calc(100% - 20px);
+  width: calc(100% - 30px);
 }
 @media (min-width: 1200px) {
   .header {
@@ -2192,7 +2193,7 @@ mjx-container + br {
   border-radius: initial;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   box-sizing: border-box;
-  padding: 40px;
+  padding: 60px;
   width: calc(100% - 312px);
 }
 @media (max-width: 991px) {
@@ -2446,7 +2447,7 @@ mjx-container + br {
   background: #fff;
   border-radius: initial;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
-  padding: 40px;
+  padding: 60px;
 }
 .post-block + .post-block {
   border-radius: initial;
@@ -2459,7 +2460,7 @@ mjx-container + br {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   margin: auto;
   margin-top: 12px;
-  padding: 40px;
+  padding: 60px;
 }
 .tabs-comment {
   margin-top: 1em;

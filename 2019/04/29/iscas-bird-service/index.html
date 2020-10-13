@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 4.2.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -22,20 +22,23 @@
     var CONFIG = {"hostname":"zolars.github.io","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","width":300,"display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="By IDP project, I learned about Echarts on javascript. With this experiences, I took a job yesterday: Making a demo webpage for airlines. Originally, I purpose to write this with JS code and HTML but">
+  <meta name="description" content="Good News! After getting the domian name, we finished pressure testing. The average processing efficiency is up to 12 requests per second and theoretically, the service can support 400 users simultane">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python ❤ Echarts - Making an airline Echarts">
-<meta property="og:url" content="https://zolars.github.io/2018/11/19/cas-airline/index.html">
+<meta property="og:title" content="Constructure of Waterbirds recognition interface service">
+<meta property="og:url" content="https://zolars.github.io/2019/04/29/iscas-bird-service/index.html">
 <meta property="og:site_name" content="Yifei&#39;s Blog">
-<meta property="og:description" content="By IDP project, I learned about Echarts on javascript. With this experiences, I took a job yesterday: Making a demo webpage for airlines. Originally, I purpose to write this with JS code and HTML but">
+<meta property="og:description" content="Good News! After getting the domian name, we finished pressure testing. The average processing efficiency is up to 12 requests per second and theoretically, the service can support 400 users simultane">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2018-11-19T06:49:37.000Z">
-<meta property="article:modified_time" content="2019-11-26T13:02:00.703Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/zolars/pic-bed/master/20191011003200.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zolars/pic-bed/master/20191010232000.png">
+<meta property="article:published_time" content="2019-04-29T02:14:08.000Z">
+<meta property="article:modified_time" content="2020-07-24T01:06:09.813Z">
 <meta property="article:author" content="Yifei">
-<meta property="article:tag" content="Visualizations">
+<meta property="article:tag" content="CS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/zolars/pic-bed/master/20191011003200.png">
 
-<link rel="canonical" href="https://zolars.github.io/2018/11/19/cas-airline/">
+<link rel="canonical" href="https://zolars.github.io/2019/04/29/iscas-bird-service/">
 
 
 <script id="page-configurations">
@@ -47,7 +50,7 @@
   };
 </script>
 
-  <title>Python ❤ Echarts - Making an airline Echarts | Yifei's Blog</title>
+  <title>Constructure of Waterbirds recognition interface service | Yifei's Blog</title>
   
 
 
@@ -157,7 +160,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="https://zolars.github.io/2018/11/19/cas-airline/">
+    <link itemprop="mainEntityOfPage" href="https://zolars.github.io/2019/04/29/iscas-bird-service/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -170,7 +173,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          Python ❤ Echarts - Making an airline Echarts
+          Constructure of Waterbirds recognition interface service
         </h2>
 
         <div class="post-meta">
@@ -180,7 +183,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2018-11-19 14:49:37" itemprop="dateCreated datePublished" datetime="2018-11-19T14:49:37+08:00">2018-11-19</time>
+              <time title="Created: 2019-04-29 10:14:08" itemprop="dateCreated datePublished" datetime="2019-04-29T10:14:08+08:00">2019-04-29</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -201,8 +204,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2018/11/19/cas-airline/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/19/cas-airline/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2019/04/29/iscas-bird-service/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/29/iscas-bird-service/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -217,30 +220,31 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <blockquote>
-<p>By IDP project, I learned about Echarts on javascript. With this experiences, I took a job yesterday: Making a demo webpage for airlines. Originally, I purpose to write this with JS code and HTML but I just wanna make this page expansionable and ‘agile’. Complementing this with Python Flask structure and explore pyecharts package seems good. Anyway, these days are too boring without any job​. Time to work 🙌</p>
-</blockquote>
+        <p>Good News! After getting the domian name, we finished pressure testing. The average processing efficiency is up to 12 requests per second and theoretically, the service can support 400 users simultaneously.</p>
+<p>Now you can try the service by visiting this page and upload a waterbird’s picture such as Red-breasted merganser: <a href="https://birdid.iscas.ac.cn:8080/upload/" target="_blank" rel="noopener">https://birdid.iscas.ac.cn:8080/upload/</a></p>
+<p><img src="https://raw.githubusercontent.com/zolars/pic-bed/master/20191011003200.png" alt=""></p>
+<p align="center">Red-breasted merganser</p>
+
 <a id="more"></a>
 
-<h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><ol>
-<li>In the main page, draw global 2D map. On the left of page, add window with a user list.</li>
-<li>Click on a user on the right to draw all the aircraft routes (dynamic effects) related to the user on the global 2D map, and display the user details window on the left side of the page; when the user is clicked again, the relevant route of the user is hidden, user details are hidden as well in information window.</li>
-</ol>
-<h2 id="Implements"><a href="#Implements" class="headerlink" title="Implements"></a>Implements</h2><ol>
-<li><p>With Flask</p>
-<p>Flask is a lightweight <a href="https://wsgi.readthedocs.io/" target="_blank" rel="noopener">WSGI</a> web application framework. With specific website templates and Jinja2, I can easily build a direct and fast web app. It is also a good method for visualization with Python script.</p>
-</li>
-<li><p>With Echarts</p>
-<p>Echarts, a brilliant JavaScript charts lib. I’m deeply impressed by it. As an open-sourced, web-based, cross-platform framework, implements uncredible stablity and performance with Streaming architecture. Consequently, Echarts make the best practice for the extensibility of JS code.</p>
-<p>However, just the original JS code is too redundancy. We don’t want to update charts every time when the page is generated. So with the help of Python script, we can load the airlines data into the original html without any JS logic.</p>
-</li>
-<li><p>With Pyecharts</p>
-<p>In summary, I decided to code with Pyecharts and Flask. Just operate one language, Python, for the whole task, which is really convenience. Firstly, fill the json data in python. Secondly, generate the Echarts JS code through python script. In the end, deploy the JavaScript with Flask templates and show the pages in browsers. What’s more, I still had approach to save the full html and JS so that we can move them everywhere.</p>
-</li>
-</ol>
-<h2 id="Achievements"><a href="#Achievements" class="headerlink" title="Achievements"></a>Achievements</h2><p><a href="./cas-airline.html">Click to see the website!</a></p>
-<p>Highlights for the simple file tree:</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── app.py</span><br><span class="line">├── airports.json</span><br><span class="line">├── data.json</span><br><span class="line">└── templates</span><br><span class="line">    ├── image</span><br><span class="line">    │   ├── <span class="keyword">user</span>.png</span><br><span class="line">    ├── macro</span><br><span class="line">    └── simple_chart.html</span><br><span class="line">    ```</span><br><span class="line"></span><br><span class="line">`airports.json` <span class="keyword">and</span> `data.json` are the data <span class="type">json</span>.</span><br><span class="line"></span><br><span class="line">## Conclusion</span><br><span class="line"></span><br><span class="line"><span class="keyword">With</span> the source code, `app.py` which <span class="keyword">is</span> <span class="keyword">no</span> more than <span class="number">150</span> lines, we can realize the whole website. Obviously, this <span class="keyword">work</span> approach conspicuously reduced workloads <span class="keyword">and</span> make your life easier <span class="keyword">as</span> a programmer😀</span><br></pre></td></tr></table></figure>
+<hr>
+<p>Recently, I got the remote access key of our servers located at laboratory, which was a brilliant good news meaning that I can have fun with the 4-WAY SLi PASCAL TITAN Xp anywhere and anytime! Of course not running games, don’t think that. I had a job, trying to convince myself :)</p>
+<p>After the BCNN model’s constructure in the last three months, my new target is to deploy the recongition service online 24/7. In course of the institute’s powerful servers, which is actually the most powerful servers I’ve seen before, I didn’t care about the recognition fps at first. But in practise, the real performance is low, seems like it was running the model on my laptop without GPUs…It took almost two minutes to give one result!</p>
+<p>It shocked me for a while though I clearly know why it had happened. The report I handed in months before mentioned that problem.</p>
+<blockquote>
+<p>Noticing that deploying the model costs too many time, the next goal is to realize the feasible and high-quality method to reduce time cost on rebuilding the model. When using the model to identify birds, can the model instance be kept in memory once completely loaded?</p>
+</blockquote>
+<p>The problem occured when I run my training on the PC with just one Titan Xp. I assumed four Titan Xp will be better? The reality is worse. To keep the model instance in memory once completely loaded needed to be done. At the same time, we had to regard that the large amount of requests and image cache may increase the servers’ stress. I decided to deploy this model with Flask and nginx+Gunicorn on Ubuntu. The code isn’t sophisticated:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/upload/', methods=['GET', 'POST'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main_page</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">if</span> request.method == <span class="string">'POST'</span>:</span><br><span class="line">        file = request.files[<span class="string">'file'</span>]</span><br><span class="line">        <span class="keyword">if</span> file <span class="keyword">and</span> allowed_file(file.filename):</span><br><span class="line">            <span class="comment"># filename = secure_filename(file.filename)</span></span><br><span class="line">            <span class="comment"># file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))</span></span><br><span class="line">            results = model.test(Image.open(file))</span><br><span class="line">            ...</span><br><span class="line">            ...</span><br></pre></td></tr></table></figure>
+
+<p>With multiple threads, we loaded about ten instances of the model in memory. When the requests came in, Flask responses them by calling functions with decorator <code>@app.route(...)</code>. Furthermore, the function’s return is the response of this request. Enough intuitive. Easier than Java Servlets’ separate logic (certainly slower).</p>
+<p>The Gunicorn was used to manage and deal with high concurrency. <code>-w</code> parameter is the amount of workers. With <code>nohup</code> to keep the service online all the time.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gunicorn -w 4 -b 127.0.0.1:8000 service:app</span><br></pre></td></tr></table></figure>
+
+<p>In the end, set the nginx point to <a href="http://127.0.0.1:8000" target="_blank" rel="noopener">http://127.0.0.1:8000</a>. All done. The flow is a little long, as the README is.</p>
+<p><img src="https://raw.githubusercontent.com/zolars/pic-bed/master/20191010232000.png" alt=""></p>
+<p>The last step is linked the service to Internet domain name which wasn’t provided by my professor yet, so I just run this “minimalism” page with localhost. We haven’t been able to test the concurrency even though that is the key puzzle. I will keep it in sight</p>
+<p>Currently, the commercialisation of cloud deep learning servers has set up, and the large scale cloud computing vendors are competeing to take over all of the market. Companies include Deep Learning on AWS by Amazon, Machine Learning Studio by Microsoft, Cloud Platform by Google, PaddlePaddle Online by Baidu, TI-ML by Tencent, and ML Pai by Alibaba. In addition, more and more deployment technologies are created. iOS and Android both developed AI Core in order to run ML services on mobile phones. Maybe AI’s mobile deployment on IOT is the next trending on CS.</p>
 
     </div>
 
@@ -250,7 +254,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Visualizations/" rel="tag"># Visualizations</a>
+              <a href="/tags/CS/" rel="tag"># CS</a>
           </div>
 
         
@@ -259,12 +263,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2018/09/30/zhangfei-report-3/" rel="prev" title="Zhangfei 项目进展情况 3">
-      <i class="fa fa-chevron-left"></i> Zhangfei 项目进展情况 3
+    <a href="/2019/03/08/spring-in-beiping/" rel="prev" title="北平的春天">
+      <i class="fa fa-chevron-left"></i> 北平的春天
     </a></div>
       <div class="post-nav-item">
-    <a href="/2019/01/08/cas-bird-bcnn/" rel="next" title="Fine-grained bird classification experiment with the BCNN">
-      Fine-grained bird classification experiment with the BCNN <i class="fa fa-chevron-right"></i>
+    <a href="/2019/07/01/financial-sentiment-charts/" rel="next" title="Financial Sentiment Charts <br> Easy to analysis Finance with Tweets' Sentiments">
+      Financial Sentiment Charts <br> Easy to analysis Finance with Tweets' Sentiments <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -332,7 +336,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Requirements"><span class="nav-text">Requirements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Implements"><span class="nav-text">Implements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Achievements"><span class="nav-text">Achievements</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -347,7 +350,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -515,7 +518,7 @@
       quicklink({
         timeout : 3000,
         priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://zolars.github.io/2018/11/19/cas-airline/',]
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://zolars.github.io/2019/04/29/iscas-bird-service/',]
       });
       });
   </script>
@@ -532,9 +535,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://zolars.github.io/2018/11/19/cas-airline/";
-    this.page.identifier = "2018/11/19/cas-airline/";
-    this.page.title = "Python ❤ Echarts - Making an airline Echarts";
+    this.page.url = "https://zolars.github.io/2019/04/29/iscas-bird-service/";
+    this.page.identifier = "2019/04/29/iscas-bird-service/";
+    this.page.title = "Constructure of Waterbirds recognition interface service";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
