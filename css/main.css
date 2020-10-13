@@ -1189,7 +1189,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #597c50;
+  background: #91735c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1482,7 +1482,7 @@ pre .javascript .function {
 }
 .back-to-top {
   background: transparent;
-  margin: 8px -10px -20px;
+  margin: -5px -10px -20px;
   opacity: 0;
 }
 .back-to-top.back-to-top-on {
@@ -2194,7 +2194,7 @@ mjx-container + br {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   box-sizing: border-box;
   padding: 60px;
-  width: calc(100% - 312px);
+  width: calc(100% - 325px);
 }
 @media (max-width: 991px) {
   .content-wrap {
@@ -2361,7 +2361,7 @@ mjx-container + br {
 }
 .sidebar-inner.affix {
   position: fixed;
-  top: 12px;
+  top: 25px;
 }
 .sidebar-inner.affix-bottom {
   position: absolute;
@@ -2433,7 +2433,7 @@ mjx-container + br {
 }
 .back-to-top {
   background: var(--body-bg-color);
-  margin: -4px -10px -18px;
+  margin: -17px -10px -18px;
 }
 .back-to-top.back-to-top-on {
   margin-top: 16px;
@@ -2452,14 +2452,14 @@ mjx-container + br {
 .post-block + .post-block {
   border-radius: initial;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  margin-top: 12px;
+  margin-top: 25px;
 }
 .comments {
   background: #fff;
   border-radius: initial;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   margin: auto;
-  margin-top: 12px;
+  margin-top: 25px;
   padding: 60px;
 }
 .tabs-comment {
@@ -2476,7 +2476,7 @@ mjx-container + br {
   border-radius: initial;
   border-top: initial;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  margin: 12px 0 0;
+  margin: 25px 0 0;
   padding: 10px 0 10px;
 }
 .pagination .prev,
@@ -2497,7 +2497,7 @@ mjx-container + br {
 }
 .sub-menu + .content .post-block {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  margin-top: 12px;
+  margin-top: 25px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .sub-menu + .content .post-block {
@@ -2506,7 +2506,7 @@ mjx-container + br {
 }
 @media (max-width: 767px) {
   .sub-menu + .content .post-block {
-    margin-top: 20px;
+    margin-top: 15px;
   }
 }
 .post-body h1,
@@ -2547,29 +2547,29 @@ mjx-container + br {
 }
 @media (max-width: 767px) {
   .content-wrap {
-    padding: 20px;
+    padding: 15px;
   }
   .posts-expand {
     margin: initial;
   }
   .posts-expand .post-button {
-    margin: 12px 0;
+    margin: 25px 0;
   }
   .post-block {
     border-radius: initial;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
     min-height: auto;
-    padding: 12px;
+    padding: 25px;
   }
   .post-block + .post-block {
-    margin-top: 20px;
+    margin-top: 15px;
   }
   .comments {
-    margin-top: 20px;
-    padding: 10px 12px;
+    margin-top: 15px;
+    padding: 10px 25px;
   }
   .pagination {
-    margin: 20px 0 0;
+    margin: 15px 0 0;
   }
 }
 body {
